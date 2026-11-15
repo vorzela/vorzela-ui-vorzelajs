@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="VorzelaJS UI — native signals components previewed live in the real DOM. No virtual DOM, no React."
+    />
+    <meta name="theme-color" content="#f6f7f9" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>VorzelaJS UI · Preview</title>
+    <script>
+      ;(() => {
+        try {
+          const param = new URLSearchParams(window.location.search).get('theme')
+          const stored = localStorage.getItem('vz-theme')
+          const dark = param
+            ? param === 'dark'
+            : stored
+              ? stored === 'dark'
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+          if (dark) {
+            document.documentElement.classList.add('dark')
+            document.documentElement.style.colorScheme = 'dark'
+          }
+        } catch {
+          /* localStorage or URL parsing unavailable */
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/dev/main.tsx"></script>
+  </body>
+</html>

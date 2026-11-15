@@ -38,7 +38,7 @@ The CLI reads `vorzelajs.ui.json` from the current directory:
 ```json
 {
   "registry": "https://raw.githubusercontent.com/vorzela/vorzela-ui-vorzelajs/main/registry",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "aliases": {
     "base": "~",
     "components": "~/components/ui",
@@ -125,6 +125,33 @@ npm run verify
 
 The CLI and registry tests copy components into a temporary project and assert
 that aliases, SCSS paths and `@vorzelajs/table` dependencies are correct.
+
+### Preview app
+
+`npm run dev` starts a component preview and docs app at
+`http://localhost:5173`. It is a real VorzelaJS app: every demo is mounted in
+the DOM with signals, not rendered from React or a static HTML dump.
+
+```bash
+npm run dev             # live preview, hot reload
+npm run build:preview   # production build into dist-preview/
+npm run preview         # serve the built preview
+```
+
+What the app contains:
+
+- `#/` — overview, counts, and a quick-start snippet.
+- `#/components` — searchable index of every component, grouped by category.
+- `#/components/<slug>` — live preview, import path, copyable source and the
+  public prop table for one component.
+- `#/gallery` — every preview mounted at once, filterable by group.
+
+The preview lives in `dev/`; it imports components through the same `~`
+alias a consumer gets from `vorzelajs-ui init`, so it exercises the real
+paths. `dev/docs/registry.ts` holds the metadata, and each file in
+`dev/docs/previews/` exports the live demos for one group. `vite.config.ts`
+wires the VorzelaJS plugin, the alias, SCSS module naming and the Sass load
+path.
 
 ## Adding or changing a component
 

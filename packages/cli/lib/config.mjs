@@ -7,7 +7,7 @@ export const MANIFEST_DIR = '.vorzelajs-ui'
 export const DEFAULT_CONFIG = {
   registry:
     'https://raw.githubusercontent.com/vorzela/vorzela-ui-vorzelajs/main/registry',
-  version: '0.1.1',
+  version: '0.1.2',
   aliases: {
     base: '~',
     components: '~/components/ui',

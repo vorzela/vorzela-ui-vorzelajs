@@ -17,6 +17,7 @@ import {
   Outline,
   SimpleDataTable,
   SizeProvider,
+  Sparkles,
   useSize,
 } from '../src/index.ts'
 import type { AppColumnDef } from '../src/lib/table.ts'
@@ -143,6 +144,35 @@ describe('Vorzela UI', () => {
     const icon = container.querySelector('[role="img"]')
     expect(icon?.getAttribute('aria-label')).toBe('Status')
     expect(icon?.textContent).toBe('!')
+  })
+
+  it('creates Lucide icon SVGs in the SVG namespace', () => {
+    const container = document.createElement('div')
+    render(<Sparkles aria-hidden />, container)
+
+    const svg = container.querySelector('svg')
+    expect(svg?.namespaceURI).toBe('http://www.w3.org/2000/svg')
+    expect(svg?.querySelector('path')?.namespaceURI).toBe(
+      'http://www.w3.org/2000/svg',
+    )
+    expect(svg?.getAttribute('width')).toBe('1em')
+  })
+
+  it('accepts a fixed pixel size on Lucide icons', () => {
+    const container = document.createElement('div')
+    render(<Sparkles aria-hidden size={24} />, container)
+
+    const svg = container.querySelector('svg')
+    expect(svg?.getAttribute('width')).toBe('24')
+    expect(svg?.getAttribute('height')).toBe('24')
+  })
+
+  it('serialises Lucide icons on the server', () => {
+    const html = renderToString(() => <Sparkles aria-hidden />)
+
+    expect(html).toContain('<svg')
+    expect(html).toContain('viewBox="0 0 24 24"')
+    expect(html).toContain('<path')
   })
 
   it('renders both data tables from the shared @vorzelajs/table features', () => {

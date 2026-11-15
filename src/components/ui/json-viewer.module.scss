@@ -86,7 +86,9 @@ $mono-font-stack:
 }
 
 .number {
-  color: vz.color('info');
+  // `info` is an accent surface colour; use the primary text tone so JSON
+  // numbers keep AA contrast on the light background.
+  color: vz.color('primary');
 }
 
 .boolean {
