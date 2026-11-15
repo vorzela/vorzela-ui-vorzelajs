@@ -1,0 +1,27 @@
+{
+  "name": "anchor",
+  "type": "ui",
+  "version": "0.1.0",
+  "dependencies": [
+    "@vorzelajs/core",
+    "@vorzelajs/dom"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "hooks",
+    "lib-cx",
+    "styles"
+  ],
+  "files": [
+    {
+      "path": "components/ui/anchor.tsx",
+      "content": "import { onCleanup, signal } from '@vorzelajs/core'\nimport { For } from '@vorzelajs/dom'\nimport { useId } from '~/hooks/use-id.ts'\nimport { cx } from '~/lib/cx.ts'\nimport styles from './anchor.module.scss'\n\nexport type AnchorItem = {\n  id: string\n  label: string\n  level?: 2 | 3 | 4\n}\n\nexport interface AnchorProps {\n  items: AnchorItem[] | (() => AnchorItem[])\n  label?: string\n  offset?: number\n  smooth?: boolean\n  activeId?: string | (() => string)\n  onChange?: (id: string) => void\n  className?: string\n  id?: string\n}\n\n/** Table of contents with a scroll-spy indicator. */\nexport function Anchor({\n  items,\n  label = 'On this page',\n  offset = 96,\n  smooth = true,\n  activeId,\n  onChange,\n  className,\n  id,\n}: AnchorProps) {\n  const labelId = `${id ?? useId('anchor')}-label`\n  const list = typeof items === 'function' ? items : () => items\n  const controlled = activeId === undefined ? null : typeof activeId === 'function' ? activeId : () => activeId\n  const [internal, setInternal] = signal(list()[0]?.id ?? '')\n  const active = (): string => (controlled ? controlled() : internal())\n\n  if (typeof window !== 'undefined' && !controlled) {\n    let frame = 0\n    const update = (): void => {\n      frame = 0\n      let current = list()[0]?.id ?? ''\n      for (const item of list()) {\n        const element = document.getElementById(item.id)\n        if (!element) continue\n        if (element.getBoundingClientRect().top <= offset + 1) current = item.id\n        else break\n      }\n      setInternal((previous) => (previous === current ? previous : current))\n    }\n    const schedule = (): void => {\n      if (frame) return\n      frame = window.requestAnimationFrame(update)\n    }\n    update()\n    window.addEventListener('scroll', schedule, { passive: true })\n    window.addEventListener('resize', schedule)\n    onCleanup(() => {\n      window.removeEventListener('scroll', schedule)\n      window.removeEventListener('resize', schedule)\n      if (frame) window.cancelAnimationFrame(frame)\n    })\n  }\n\n  const go = (event: Event, item: AnchorItem): void => {\n    const element = document.getElementById(item.id)\n    if (!element) return\n    event.preventDefault()\n    const top = element.getBoundingClientRect().top + window.scrollY - offset\n    window.scrollTo({ top, behavior: smooth ? 'smooth' : 'auto' })\n    if (!controlled) setInternal(item.id)\n    onChange?.(item.id)\n  }\n\n  return (\n    <nav id={id} aria-labelledby={labelId} className={cx(styles.root, className)}>\n      <p id={labelId} className={styles.label}>\n        {label}\n      </p>\n      <ol className={styles.list}>\n        <For each={list}>\n          {(item) => (\n            <li>\n              <a\n                href={`#${item.id}`}\n                aria-current={item.id === active() ? 'location' : undefined}\n                className={cx(\n                  styles.link,\n                  item.level === 3 && styles.level3,\n                  item.level === 4 && styles.level4,\n                  item.id === active() && styles.active,\n                )}\n                onClick={(event) => go(event, item)}\n              >\n                {item.label}\n              </a>\n            </li>\n          )}\n        </For>\n      </ol>\n    </nav>\n  )\n}\n"
+    },
+    {
+      "path": "components/ui/anchor.module.scss",
+      "content": "@use 'styles' as vz;\n\n.root {\n  display: flex;\n  flex-direction: column;\n  gap: vz.space(2);\n  min-width: 0;\n}\n\n.label {\n  margin: 0;\n  color: vz.color('muted-foreground');\n  font-size: 0.6875rem;\n  font-weight: 600;\n  letter-spacing: 0.04em;\n  text-transform: uppercase;\n}\n\n.list {\n  display: flex;\n  flex-direction: column;\n  gap: 2px;\n  padding: 0;\n  margin: 0;\n  list-style: none;\n  border-inline-start: 1px solid vz.color('border');\n}\n\n.link {\n  display: block;\n  padding: vz.space(1) vz.space(3);\n  margin-inline-start: -1px;\n  border-inline-start: 2px solid transparent;\n  color: vz.color('muted-foreground');\n  font-size: vz.font-size('xs');\n  line-height: 1.5;\n  text-decoration: none;\n  transition:\n    color vz.duration('fast') vz.ease('out'),\n    border-color vz.duration('fast') vz.ease('out');\n\n  @include vz.hover {\n    color: vz.color('foreground');\n  }\n\n  @include vz.focus-ring(2px, 0, 0.65);\n}\n\n.active {\n  border-inline-start-color: vz.color('primary');\n  color: vz.color('foreground');\n  font-weight: 500;\n}\n\n.level-3 {\n  padding-inline-start: vz.space(6);\n}\n\n.level-4 {\n  padding-inline-start: vz.space(9);\n}\n"
+    }
+  ],
+  "description": "anchor component",
+  "alias": false
+}

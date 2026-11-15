@@ -1,0 +1,26 @@
+{
+  "name": "outline",
+  "type": "ui",
+  "version": "0.1.0",
+  "dependencies": [
+    "@vorzelajs/core",
+    "@vorzelajs/dom"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "lib-cx",
+    "styles"
+  ],
+  "files": [
+    {
+      "path": "components/ui/outline.tsx",
+      "content": "import { For } from '@vorzelajs/dom'\nimport { cx } from '~/lib/cx.ts'\nimport styles from './outline.module.scss'\n\nexport interface OutlineItem {\n  id: string\n  label: string\n  level?: number\n}\n\nexport interface OutlineProps {\n  items: OutlineItem[] | (() => OutlineItem[])\n  activeId?: string | (() => string | undefined)\n  className?: string\n  label?: string\n}\n\n/** Table-of-contents navigation for long documents. */\nexport function Outline({\n  items,\n  activeId,\n  className,\n  label = 'On this page',\n}: OutlineProps) {\n  const list = typeof items === 'function' ? items : () => items\n  const active =\n    typeof activeId === 'function' ? activeId : () => activeId\n\n  return (\n    <nav className={cx(styles.root, className)} aria-label={label}>\n      <p className={styles.label}>{label}</p>\n      <ul className={styles.list}>\n        <For each={list}>\n          {(item) => (\n            <li style={{ paddingLeft: `${Math.max(0, (item.level ?? 2) - 2) * 12}px` }}>\n              <a\n                className={cx(styles.link, item.id === active() && styles.active)}\n                href={`#${item.id}`}\n                aria-current={item.id === active() ? 'location' : undefined}\n              >\n                {item.label}\n              </a>\n            </li>\n          )}\n        </For>\n      </ul>\n    </nav>\n  )\n}\n"
+    },
+    {
+      "path": "components/ui/outline.module.scss",
+      "content": "@use 'styles' as vz;\n\n.root {\n  font-size: vz.font-size('sm');\n}\n\n.label {\n  margin-bottom: vz.space(2);\n  color: vz.color('muted-foreground');\n  font-size: vz.font-size('xs');\n  font-weight: 600;\n  text-transform: uppercase;\n  letter-spacing: 0.06em;\n}\n\n.list {\n  display: flex;\n  flex-direction: column;\n  gap: 2px;\n}\n\n.link {\n  display: block;\n  padding: vz.space(1) vz.space(2);\n  border-left: 2px solid transparent;\n  color: vz.color('muted-foreground');\n  line-height: 1.4;\n}\n\n.link:hover {\n  color: vz.color('foreground');\n}\n\n.active {\n  border-left-color: vz.color('primary');\n  color: vz.color('primary');\n  font-weight: 600;\n}\n"
+    }
+  ],
+  "description": "outline component",
+  "alias": false
+}

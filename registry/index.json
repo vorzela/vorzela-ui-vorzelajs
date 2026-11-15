@@ -1,0 +1,3495 @@
+{
+  "version": "0.1.0",
+  "items": [
+    {
+      "name": "accordion",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "accordion component",
+      "alias": false,
+      "files": [
+        "components/ui/accordion.tsx",
+        "components/ui/accordion.module.scss"
+      ]
+    },
+    {
+      "name": "action-menu",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "lib-types",
+        "primitives",
+        "styles"
+      ],
+      "description": "action-menu component",
+      "alias": false,
+      "files": [
+        "components/ui/action-menu.tsx",
+        "components/ui/action-menu.module.scss"
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "alert component",
+      "alias": false,
+      "files": [
+        "components/ui/alert.tsx",
+        "components/ui/alert.module.scss"
+      ]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "button",
+        "hooks",
+        "lib-cx",
+        "lib-overlay",
+        "lib-types",
+        "primitives",
+        "styles"
+      ],
+      "description": "alert-dialog component",
+      "alias": false,
+      "files": [
+        "components/ui/alert-dialog.tsx",
+        "components/ui/alert-dialog.module.scss"
+      ]
+    },
+    {
+      "name": "anchor",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "anchor component",
+      "alias": false,
+      "files": [
+        "components/ui/anchor.tsx",
+        "components/ui/anchor.module.scss"
+      ]
+    },
+    {
+      "name": "app-shell",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "primitives",
+        "sidebar",
+        "styles",
+        "topbar"
+      ],
+      "description": "app-shell component",
+      "alias": false,
+      "files": [
+        "components/ui/app-shell.tsx",
+        "components/ui/app-shell.module.scss"
+      ]
+    },
+    {
+      "name": "aspect-ratio",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "aspect-ratio component",
+      "alias": false,
+      "files": [
+        "components/ui/aspect-ratio.tsx",
+        "components/ui/aspect-ratio.module.scss"
+      ]
+    },
+    {
+      "name": "autocomplete",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "label",
+        "lib-cx",
+        "lib-types",
+        "primitives",
+        "styles"
+      ],
+      "description": "autocomplete component",
+      "alias": false,
+      "files": [
+        "components/ui/autocomplete.tsx",
+        "components/ui/autocomplete.module.scss"
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "avatar component",
+      "alias": false,
+      "files": [
+        "components/ui/avatar.tsx",
+        "components/ui/avatar.module.scss"
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "badge component",
+      "alias": false,
+      "files": [
+        "components/ui/badge.tsx",
+        "components/ui/badge.module.scss"
+      ]
+    },
+    {
+      "name": "banner",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "banner component",
+      "alias": false,
+      "files": [
+        "components/ui/banner.tsx",
+        "components/ui/banner.module.scss"
+      ]
+    },
+    {
+      "name": "bar-chart",
+      "type": "chart",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "d3"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "chart-shared"
+      ],
+      "description": "bar-chart chart",
+      "alias": false,
+      "files": [
+        "charts/bar-chart.tsx"
+      ]
+    },
+    {
+      "name": "bento-grid",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "bento-grid component",
+      "alias": false,
+      "files": [
+        "components/ui/bento-grid.tsx",
+        "components/ui/bento-grid.module.scss"
+      ]
+    },
+    {
+      "name": "blockquote",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "blockquote component",
+      "alias": false,
+      "files": [
+        "components/ui/blockquote.tsx",
+        "components/ui/blockquote.module.scss"
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "breadcrumb component",
+      "alias": false,
+      "files": [
+        "components/ui/breadcrumb.tsx",
+        "components/ui/breadcrumb.module.scss"
+      ]
+    },
+    {
+      "name": "bullet-chart",
+      "type": "chart",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "d3"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "chart-shared"
+      ],
+      "description": "bullet-chart chart",
+      "alias": false,
+      "files": [
+        "charts/bullet-chart.tsx"
+      ]
+    },
+    {
+      "name": "button",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "button component",
+      "alias": false,
+      "files": [
+        "components/ui/button.tsx",
+        "components/ui/button.module.scss"
+      ]
+    },
+    {
+      "name": "button-group",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "button-group component",
+      "alias": false,
+      "files": [
+        "components/ui/button-group.tsx",
+        "components/ui/button-group.module.scss"
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "calendar-utils",
+        "hooks",
+        "icons",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "calendar component",
+      "alias": false,
+      "files": [
+        "components/ui/calendar.tsx",
+        "components/ui/calendar.module.scss"
+      ]
+    },
+    {
+      "name": "calendar-utils",
+      "type": "lib",
+      "version": "0.1.0",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "description": "Calendar date helpers",
+      "alias": false,
+      "files": [
+        "components/ui/calendar-utils.ts"
+      ]
+    },
+    {
+      "name": "callout",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "callout component",
+      "alias": false,
+      "files": [
+        "components/ui/callout.tsx",
+        "components/ui/callout.module.scss"
+      ]
+    },
+    {
+      "name": "candlestick-chart",
+      "type": "chart",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "d3"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "chart-shared"
+      ],
+      "description": "candlestick-chart chart",
+      "alias": false,
+      "files": [
+        "charts/candlestick-chart.tsx"
+      ]
+    },
+    {
+      "name": "card",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "card component",
+      "alias": false,
+      "files": [
+        "components/ui/card.tsx",
+        "components/ui/card.module.scss"
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "button",
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "carousel component",
+      "alias": false,
+      "files": [
+        "components/ui/carousel.tsx",
+        "components/ui/carousel.module.scss"
+      ]
+    },
+    {
+      "name": "cascader",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "primitives",
+        "styles"
+      ],
+      "description": "cascader component",
+      "alias": false,
+      "files": [
+        "components/ui/cascader.tsx",
+        "components/ui/cascader.module.scss"
+      ]
+    },
+    {
+      "name": "chart-shared",
+      "type": "chart",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [
+        "@types/d3"
+      ],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "lib-types",
+        "skeleton",
+        "styles"
+      ],
+      "description": "Shared chart frame, tooltip and helpers",
+      "alias": false,
+      "files": [
+        "charts/chart-colors.ts",
+        "charts/chart-dom.ts",
+        "charts/chart-frame.tsx",
+        "charts/chart-tooltip.tsx",
+        "charts/chart-types.ts",
+        "charts/chart-utils.ts",
+        "charts/charts.module.scss",
+        "charts/use-animated-progress.ts"
+      ]
+    },
+    {
+      "name": "charts",
+      "type": "chart",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "bar-chart",
+        "bullet-chart",
+        "candlestick-chart",
+        "chart-shared",
+        "donut-chart",
+        "funnel-chart",
+        "gauge",
+        "heatmap",
+        "histogram-chart",
+        "line-chart",
+        "radar-chart",
+        "radial-bar-chart",
+        "sankey-chart",
+        "scatter-chart",
+        "sparkline",
+        "treemap-chart",
+        "waterfall-chart"
+      ],
+      "description": "All charts and the chart index",
+      "alias": false,
+      "files": [
+        "charts/index.ts"
+      ]
+    },
+    {
+      "name": "chat",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "chat component",
+      "alias": false,
+      "files": [
+        "components/ui/chat.tsx",
+        "components/ui/chat.module.scss"
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "checkbox component",
+      "alias": false,
+      "files": [
+        "components/ui/checkbox.tsx",
+        "components/ui/checkbox.module.scss"
+      ]
+    },
+    {
+      "name": "citation",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "citation component",
+      "alias": false,
+      "files": [
+        "components/ui/citation.tsx",
+        "components/ui/citation.module.scss"
+      ]
+    },
+    {
+      "name": "close-button",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "close-button component",
+      "alias": false,
+      "files": [
+        "components/ui/close-button.tsx",
+        "components/ui/close-button.module.scss"
+      ]
+    },
+    {
+      "name": "code-block",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "icons",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "code-block component",
+      "alias": false,
+      "files": [
+        "components/ui/code-block.tsx",
+        "components/ui/code-block.module.scss"
+      ]
+    },
+    {
+      "name": "collapsible",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "collapsible component",
+      "alias": false,
+      "files": [
+        "components/ui/collapsible.tsx",
+        "components/ui/collapsible.module.scss"
+      ]
+    },
+    {
+      "name": "color-picker",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "color-picker component",
+      "alias": false,
+      "files": [
+        "components/ui/color-picker.tsx",
+        "components/ui/color-picker.module.scss"
+      ]
+    },
+    {
+      "name": "combobox",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "label",
+        "lib-cx",
+        "lib-types",
+        "primitives",
+        "styles"
+      ],
+      "description": "combobox component",
+      "alias": false,
+      "files": [
+        "components/ui/combobox.tsx",
+        "components/ui/combobox.module.scss"
+      ]
+    },
+    {
+      "name": "command",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-overlay",
+        "lib-types",
+        "primitives",
+        "styles"
+      ],
+      "description": "command component",
+      "alias": false,
+      "files": [
+        "components/ui/command.tsx",
+        "components/ui/command.module.scss"
+      ]
+    },
+    {
+      "name": "context-menu",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "lib-types",
+        "primitives",
+        "styles"
+      ],
+      "description": "context-menu component",
+      "alias": false,
+      "files": [
+        "components/ui/context-menu.tsx",
+        "components/ui/context-menu.module.scss"
+      ]
+    },
+    {
+      "name": "cookie-consent",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "button",
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-security",
+        "primitives",
+        "styles"
+      ],
+      "description": "cookie-consent component",
+      "alias": false,
+      "files": [
+        "components/ui/cookie-consent.tsx",
+        "components/ui/cookie-consent.module.scss"
+      ]
+    },
+    {
+      "name": "copy-button",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "button",
+        "hooks",
+        "icons",
+        "lib-cx",
+        "primitives",
+        "styles"
+      ],
+      "description": "copy-button component",
+      "alias": false,
+      "files": [
+        "components/ui/copy-button.tsx",
+        "components/ui/copy-button.module.scss"
+      ]
+    },
+    {
+      "name": "currency-input",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "input",
+        "styles"
+      ],
+      "description": "currency-input component",
+      "alias": false,
+      "files": [
+        "components/ui/currency-input.tsx",
+        "components/ui/currency-input.module.scss"
+      ]
+    },
+    {
+      "name": "data-table",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "@vorzelajs/table"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "checkbox",
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-table",
+        "lib-types",
+        "primitives",
+        "simple-data-table",
+        "styles"
+      ],
+      "description": "Full data table powered by @vorzelajs/table: search, sorting, selection, column visibility and paging.",
+      "alias": false,
+      "files": [
+        "components/ui/data-table.tsx",
+        "components/ui/data-table.module.scss"
+      ]
+    },
+    {
+      "name": "date-picker",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "calendar",
+        "calendar-utils",
+        "hooks",
+        "icons",
+        "label",
+        "lib-cx",
+        "lib-types",
+        "primitives",
+        "styles"
+      ],
+      "description": "date-picker component",
+      "alias": false,
+      "files": [
+        "components/ui/date-picker.tsx",
+        "components/ui/date-picker.module.scss"
+      ]
+    },
+    {
+      "name": "description-list",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "description-list component",
+      "alias": false,
+      "files": [
+        "components/ui/description-list.tsx",
+        "components/ui/description-list.module.scss"
+      ]
+    },
+    {
+      "name": "diff-viewer",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "diff-viewer component",
+      "alias": false,
+      "files": [
+        "components/ui/diff-viewer.tsx",
+        "components/ui/diff-viewer.module.scss"
+      ]
+    },
+    {
+      "name": "donut-chart",
+      "type": "chart",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "d3"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "chart-shared",
+        "lib-cx"
+      ],
+      "description": "donut-chart chart",
+      "alias": false,
+      "files": [
+        "charts/donut-chart.tsx"
+      ]
+    },
+    {
+      "name": "drawer",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-overlay",
+        "lib-types",
+        "primitives",
+        "styles"
+      ],
+      "description": "drawer component",
+      "alias": false,
+      "files": [
+        "components/ui/drawer.tsx",
+        "components/ui/drawer.module.scss"
+      ]
+    },
+    {
+      "name": "dropdown",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "lib-types",
+        "primitives",
+        "styles"
+      ],
+      "description": "dropdown component",
+      "alias": false,
+      "files": [
+        "components/ui/dropdown.tsx",
+        "components/ui/dropdown.module.scss"
+      ]
+    },
+    {
+      "name": "editable",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "editable component",
+      "alias": false,
+      "files": [
+        "components/ui/editable.tsx",
+        "components/ui/editable.module.scss"
+      ]
+    },
+    {
+      "name": "empty",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "button",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "empty component",
+      "alias": false,
+      "files": [
+        "components/ui/empty.tsx",
+        "components/ui/empty.module.scss"
+      ]
+    },
+    {
+      "name": "error-state",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "button",
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "error-state component",
+      "alias": false,
+      "files": [
+        "components/ui/error-state.tsx",
+        "components/ui/error-state.module.scss"
+      ]
+    },
+    {
+      "name": "field",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "label",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "field component",
+      "alias": false,
+      "files": [
+        "components/ui/field.tsx",
+        "components/ui/field.module.scss"
+      ]
+    },
+    {
+      "name": "file-picker",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "button",
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-security",
+        "lib-types",
+        "styles"
+      ],
+      "description": "file-picker component",
+      "alias": false,
+      "files": [
+        "components/ui/file-picker.tsx",
+        "components/ui/file-picker.module.scss"
+      ]
+    },
+    {
+      "name": "file-upload",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "file-picker"
+      ],
+      "description": "file-upload component",
+      "alias": false,
+      "files": [
+        "components/ui/file-upload.tsx"
+      ]
+    },
+    {
+      "name": "float-button",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "float-button component",
+      "alias": false,
+      "files": [
+        "components/ui/float-button.tsx",
+        "components/ui/float-button.module.scss"
+      ]
+    },
+    {
+      "name": "floating-label-input",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "floating-label-input component",
+      "alias": false,
+      "files": [
+        "components/ui/floating-label-input.tsx",
+        "components/ui/floating-label-input.module.scss"
+      ]
+    },
+    {
+      "name": "funnel-chart",
+      "type": "chart",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "d3"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "chart-shared"
+      ],
+      "description": "funnel-chart chart",
+      "alias": false,
+      "files": [
+        "charts/funnel-chart.tsx"
+      ]
+    },
+    {
+      "name": "gauge",
+      "type": "chart",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "d3"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "chart-shared",
+        "hooks",
+        "lib-cx"
+      ],
+      "description": "gauge chart",
+      "alias": false,
+      "files": [
+        "charts/gauge.tsx"
+      ]
+    },
+    {
+      "name": "glass-panel",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "glass-panel component",
+      "alias": false,
+      "files": [
+        "components/ui/glass-panel.tsx",
+        "components/ui/glass-panel.module.scss"
+      ]
+    },
+    {
+      "name": "header",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "header component",
+      "alias": false,
+      "files": [
+        "components/ui/header.tsx",
+        "components/ui/header.module.scss"
+      ]
+    },
+    {
+      "name": "heatmap",
+      "type": "chart",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "d3"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "chart-shared"
+      ],
+      "description": "heatmap chart",
+      "alias": false,
+      "files": [
+        "charts/heatmap.tsx"
+      ]
+    },
+    {
+      "name": "histogram-chart",
+      "type": "chart",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "d3"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "chart-shared",
+        "lib-cx"
+      ],
+      "description": "histogram-chart chart",
+      "alias": false,
+      "files": [
+        "charts/histogram-chart.tsx"
+      ]
+    },
+    {
+      "name": "hooks",
+      "type": "hook",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "description": "hooks component",
+      "alias": false,
+      "files": [
+        "hooks/index.ts",
+        "hooks/use-container-size.ts",
+        "hooks/use-controllable-state.ts",
+        "hooks/use-copy-to-clipboard.ts",
+        "hooks/use-hotkeys.ts",
+        "hooks/use-id.ts",
+        "hooks/use-isomorphic-layout-effect.ts",
+        "hooks/use-latest.ts",
+        "hooks/use-media-query.ts",
+        "hooks/use-mounted.ts",
+        "hooks/use-online-status.ts",
+        "hooks/use-reduced-motion.ts"
+      ]
+    },
+    {
+      "name": "hover-card",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "lib-types",
+        "primitives",
+        "styles"
+      ],
+      "description": "hover-card component",
+      "alias": false,
+      "files": [
+        "components/ui/hover-card.tsx",
+        "components/ui/hover-card.module.scss"
+      ]
+    },
+    {
+      "name": "icon",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "icon component",
+      "alias": false,
+      "files": [
+        "components/ui/icon.tsx",
+        "components/ui/icon.module.scss"
+      ]
+    },
+    {
+      "name": "icons",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "lucide"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "icon"
+      ],
+      "description": "Shared icon set",
+      "alias": false,
+      "files": [
+        "components/ui/icons.tsx"
+      ]
+    },
+    {
+      "name": "image-cropper",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "button",
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-security",
+        "lib-types",
+        "styles"
+      ],
+      "description": "image-cropper component",
+      "alias": false,
+      "files": [
+        "components/ui/image-cropper.tsx",
+        "components/ui/image-cropper.module.scss"
+      ]
+    },
+    {
+      "name": "input",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "label",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "input component",
+      "alias": false,
+      "files": [
+        "components/ui/input.tsx",
+        "components/ui/input.module.scss"
+      ]
+    },
+    {
+      "name": "input-group",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "input",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "input-group component",
+      "alias": false,
+      "files": [
+        "components/ui/input-group.tsx",
+        "components/ui/input-group.module.scss"
+      ]
+    },
+    {
+      "name": "invoice",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "invoice component",
+      "alias": false,
+      "files": [
+        "components/ui/invoice.tsx",
+        "components/ui/invoice.module.scss"
+      ]
+    },
+    {
+      "name": "json-viewer",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "icons",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "json-viewer component",
+      "alias": false,
+      "files": [
+        "components/ui/json-viewer.tsx",
+        "components/ui/json-viewer.module.scss"
+      ]
+    },
+    {
+      "name": "kbd",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "kbd component",
+      "alias": false,
+      "files": [
+        "components/ui/kbd.tsx",
+        "components/ui/kbd.module.scss"
+      ]
+    },
+    {
+      "name": "label",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "label component",
+      "alias": false,
+      "files": [
+        "components/ui/label.tsx",
+        "components/ui/label.module.scss"
+      ]
+    },
+    {
+      "name": "layer",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "layer component",
+      "alias": false,
+      "files": [
+        "components/ui/layer.tsx",
+        "components/ui/layer.module.scss"
+      ]
+    },
+    {
+      "name": "layout",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "layout component",
+      "alias": false,
+      "files": [
+        "components/ui/layout.tsx",
+        "components/ui/layout.module.scss"
+      ]
+    },
+    {
+      "name": "lib-cx",
+      "type": "lib",
+      "version": "0.1.0",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "description": "lib-cx component",
+      "alias": false,
+      "files": [
+        "lib/cx.ts"
+      ]
+    },
+    {
+      "name": "lib-overlay",
+      "type": "lib",
+      "version": "0.1.0",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "description": "lib-overlay component",
+      "alias": false,
+      "files": [
+        "lib/overlay.ts"
+      ]
+    },
+    {
+      "name": "lib-phone-countries",
+      "type": "lib",
+      "version": "0.1.0",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "description": "lib-phone-countries component",
+      "alias": false,
+      "files": [
+        "lib/phone-countries.ts"
+      ]
+    },
+    {
+      "name": "lib-refs",
+      "type": "lib",
+      "version": "0.1.0",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-types"
+      ],
+      "description": "lib-refs component",
+      "alias": false,
+      "files": [
+        "lib/refs.ts"
+      ]
+    },
+    {
+      "name": "lib-security",
+      "type": "lib",
+      "version": "0.1.0",
+      "dependencies": [
+        "dompurify"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "description": "lib-security component",
+      "alias": false,
+      "files": [
+        "lib/security.ts"
+      ]
+    },
+    {
+      "name": "lib-table",
+      "type": "lib",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/table"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "description": "lib-table component",
+      "alias": false,
+      "files": [
+        "lib/table.ts"
+      ]
+    },
+    {
+      "name": "lib-types",
+      "type": "lib",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "description": "lib-types component",
+      "alias": false,
+      "files": [
+        "lib/types.ts"
+      ]
+    },
+    {
+      "name": "lightbox",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "primitives",
+        "styles"
+      ],
+      "description": "lightbox component",
+      "alias": false,
+      "files": [
+        "components/ui/lightbox.tsx",
+        "components/ui/lightbox.module.scss"
+      ]
+    },
+    {
+      "name": "line-chart",
+      "type": "chart",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "d3"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "chart-shared",
+        "hooks"
+      ],
+      "description": "line-chart chart",
+      "alias": false,
+      "files": [
+        "charts/line-chart.tsx"
+      ]
+    },
+    {
+      "name": "link",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "icons",
+        "lib-cx",
+        "lib-security",
+        "lib-types",
+        "styles"
+      ],
+      "description": "link component",
+      "alias": false,
+      "files": [
+        "components/ui/link.tsx",
+        "components/ui/link.module.scss"
+      ]
+    },
+    {
+      "name": "list",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "list component",
+      "alias": false,
+      "files": [
+        "components/ui/list.tsx",
+        "components/ui/list.module.scss"
+      ]
+    },
+    {
+      "name": "markdown",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "markdown component",
+      "alias": false,
+      "files": [
+        "components/ui/markdown.tsx",
+        "components/ui/markdown.module.scss"
+      ]
+    },
+    {
+      "name": "marquee",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "marquee component",
+      "alias": false,
+      "files": [
+        "components/ui/marquee.tsx",
+        "components/ui/marquee.module.scss"
+      ]
+    },
+    {
+      "name": "masonry-grid",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "masonry-grid component",
+      "alias": false,
+      "files": [
+        "components/ui/masonry-grid.tsx",
+        "components/ui/masonry-grid.module.scss"
+      ]
+    },
+    {
+      "name": "mentions",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "mentions component",
+      "alias": false,
+      "files": [
+        "components/ui/mentions.tsx",
+        "components/ui/mentions.module.scss"
+      ]
+    },
+    {
+      "name": "menubar",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "dropdown",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "menubar component",
+      "alias": false,
+      "files": [
+        "components/ui/menubar.tsx",
+        "components/ui/menubar.module.scss"
+      ]
+    },
+    {
+      "name": "modal",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-overlay",
+        "lib-types",
+        "primitives",
+        "styles"
+      ],
+      "description": "modal component",
+      "alias": false,
+      "files": [
+        "components/ui/modal.tsx",
+        "components/ui/modal.module.scss"
+      ]
+    },
+    {
+      "name": "native-select",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "label",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "native-select component",
+      "alias": false,
+      "files": [
+        "components/ui/native-select.tsx",
+        "components/ui/native-select.module.scss"
+      ]
+    },
+    {
+      "name": "nav-icon",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "nav-icon component",
+      "alias": false,
+      "files": [
+        "components/ui/nav-icon.tsx",
+        "components/ui/nav-icon.module.scss"
+      ]
+    },
+    {
+      "name": "navigation-menu",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "navigation-menu component",
+      "alias": false,
+      "files": [
+        "components/ui/navigation-menu.tsx",
+        "components/ui/navigation-menu.module.scss"
+      ]
+    },
+    {
+      "name": "network-loader",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "lib-types",
+        "primitives",
+        "spinner",
+        "styles"
+      ],
+      "description": "network-loader component",
+      "alias": false,
+      "files": [
+        "components/ui/network-loader.tsx",
+        "components/ui/network-loader.module.scss"
+      ]
+    },
+    {
+      "name": "notification-center",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "button",
+        "empty",
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "notification-center component",
+      "alias": false,
+      "files": [
+        "components/ui/notification-center.tsx",
+        "components/ui/notification-center.module.scss"
+      ]
+    },
+    {
+      "name": "number-input",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "number-input component",
+      "alias": false,
+      "files": [
+        "components/ui/number-input.tsx",
+        "components/ui/number-input.module.scss"
+      ]
+    },
+    {
+      "name": "number-ticker",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "number-ticker component",
+      "alias": false,
+      "files": [
+        "components/ui/number-ticker.tsx",
+        "components/ui/number-ticker.module.scss"
+      ]
+    },
+    {
+      "name": "offline-banner",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "offline-banner component",
+      "alias": false,
+      "files": [
+        "components/ui/offline-banner.tsx",
+        "components/ui/offline-banner.module.scss"
+      ]
+    },
+    {
+      "name": "optimized-image",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-security",
+        "lib-types",
+        "styles"
+      ],
+      "description": "optimized-image component",
+      "alias": false,
+      "files": [
+        "components/ui/optimized-image.tsx",
+        "components/ui/optimized-image.module.scss"
+      ]
+    },
+    {
+      "name": "otp-input",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "otp-input component",
+      "alias": false,
+      "files": [
+        "components/ui/otp-input.tsx",
+        "components/ui/otp-input.module.scss"
+      ]
+    },
+    {
+      "name": "outline",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "styles"
+      ],
+      "description": "outline component",
+      "alias": false,
+      "files": [
+        "components/ui/outline.tsx",
+        "components/ui/outline.module.scss"
+      ]
+    },
+    {
+      "name": "overlay",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "overlay component",
+      "alias": false,
+      "files": [
+        "components/ui/overlay.tsx",
+        "components/ui/overlay.module.scss"
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "button",
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "primitives",
+        "styles"
+      ],
+      "description": "pagination component",
+      "alias": false,
+      "files": [
+        "components/ui/pagination.tsx",
+        "components/ui/pagination.module.scss"
+      ]
+    },
+    {
+      "name": "password-input",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "label",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "password-input component",
+      "alias": false,
+      "files": [
+        "components/ui/password-input.tsx",
+        "components/ui/password-input.module.scss"
+      ]
+    },
+    {
+      "name": "phone-input",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "label",
+        "lib-cx",
+        "lib-phone-countries",
+        "styles"
+      ],
+      "description": "phone-input component",
+      "alias": false,
+      "files": [
+        "components/ui/phone-input.tsx",
+        "components/ui/phone-input.module.scss"
+      ]
+    },
+    {
+      "name": "popconfirm",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "button",
+        "lib-types",
+        "popover",
+        "styles"
+      ],
+      "description": "popconfirm component",
+      "alias": false,
+      "files": [
+        "components/ui/popconfirm.tsx",
+        "components/ui/popconfirm.module.scss"
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "lib-overlay",
+        "lib-types",
+        "primitives",
+        "styles"
+      ],
+      "description": "popover component",
+      "alias": false,
+      "files": [
+        "components/ui/popover.tsx",
+        "components/ui/popover.module.scss"
+      ]
+    },
+    {
+      "name": "primitives",
+      "type": "primitive",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "primitives component",
+      "alias": false,
+      "files": [
+        "components/primitives/dismissable-layer.tsx",
+        "components/primitives/focus-trap.tsx",
+        "components/primitives/index.ts",
+        "components/primitives/portal.tsx",
+        "components/primitives/primitives.module.scss",
+        "components/primitives/visually-hidden.tsx"
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "styles"
+      ],
+      "description": "progress component",
+      "alias": false,
+      "files": [
+        "components/ui/progress.tsx",
+        "components/ui/progress.module.scss"
+      ]
+    },
+    {
+      "name": "qr-code",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "qr-code component",
+      "alias": false,
+      "files": [
+        "components/ui/qr-code.tsx",
+        "components/ui/qr-code.module.scss"
+      ]
+    },
+    {
+      "name": "radar-chart",
+      "type": "chart",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "d3"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "chart-shared"
+      ],
+      "description": "radar-chart chart",
+      "alias": false,
+      "files": [
+        "charts/radar-chart.tsx"
+      ]
+    },
+    {
+      "name": "radial-bar-chart",
+      "type": "chart",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "d3"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "chart-shared",
+        "lib-cx"
+      ],
+      "description": "radial-bar-chart chart",
+      "alias": false,
+      "files": [
+        "charts/radial-bar-chart.tsx"
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "radio-group component",
+      "alias": false,
+      "files": [
+        "components/ui/radio-group.tsx",
+        "components/ui/radio-group.module.scss"
+      ]
+    },
+    {
+      "name": "range-slider",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "range-slider component",
+      "alias": false,
+      "files": [
+        "components/ui/range-slider.tsx",
+        "components/ui/range-slider.module.scss"
+      ]
+    },
+    {
+      "name": "rating",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "rating component",
+      "alias": false,
+      "files": [
+        "components/ui/rating.tsx",
+        "components/ui/rating.module.scss"
+      ]
+    },
+    {
+      "name": "receipt",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "receipt component",
+      "alias": false,
+      "files": [
+        "components/ui/receipt.tsx",
+        "components/ui/receipt.module.scss"
+      ]
+    },
+    {
+      "name": "resizable",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "resizable component",
+      "alias": false,
+      "files": [
+        "components/ui/resizable.tsx",
+        "components/ui/resizable.module.scss"
+      ]
+    },
+    {
+      "name": "result",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "result component",
+      "alias": false,
+      "files": [
+        "components/ui/result.tsx",
+        "components/ui/result.module.scss"
+      ]
+    },
+    {
+      "name": "sankey-chart",
+      "type": "chart",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "d3-sankey"
+      ],
+      "devDependencies": [
+        "@types/d3-sankey"
+      ],
+      "registryDependencies": [
+        "chart-shared"
+      ],
+      "description": "sankey-chart chart",
+      "alias": false,
+      "files": [
+        "charts/sankey-chart.tsx"
+      ]
+    },
+    {
+      "name": "scatter-chart",
+      "type": "chart",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "d3"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "chart-shared",
+        "lib-cx"
+      ],
+      "description": "scatter-chart chart",
+      "alias": false,
+      "files": [
+        "charts/scatter-chart.tsx"
+      ]
+    },
+    {
+      "name": "scroll-area",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "scroll-area component",
+      "alias": false,
+      "files": [
+        "components/ui/scroll-area.tsx",
+        "components/ui/scroll-area.module.scss"
+      ]
+    },
+    {
+      "name": "search-input",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "label",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "search-input component",
+      "alias": false,
+      "files": [
+        "components/ui/search-input.tsx",
+        "components/ui/search-input.module.scss"
+      ]
+    },
+    {
+      "name": "segmented-control",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "segmented-control component",
+      "alias": false,
+      "files": [
+        "components/ui/segmented-control.tsx",
+        "components/ui/segmented-control.module.scss"
+      ]
+    },
+    {
+      "name": "select",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "label",
+        "lib-cx",
+        "lib-types",
+        "primitives",
+        "styles"
+      ],
+      "description": "select component",
+      "alias": false,
+      "files": [
+        "components/ui/select.tsx",
+        "components/ui/select.module.scss"
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "separator component",
+      "alias": false,
+      "files": [
+        "components/ui/separator.tsx",
+        "components/ui/separator.module.scss"
+      ]
+    },
+    {
+      "name": "sheet",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-overlay",
+        "lib-types",
+        "primitives",
+        "styles"
+      ],
+      "description": "sheet component",
+      "alias": false,
+      "files": [
+        "components/ui/sheet.tsx",
+        "components/ui/sheet.module.scss"
+      ]
+    },
+    {
+      "name": "sidebar",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-overlay",
+        "lib-types",
+        "styles"
+      ],
+      "description": "sidebar component",
+      "alias": false,
+      "files": [
+        "components/ui/sidebar.tsx",
+        "components/ui/sidebar.module.scss"
+      ]
+    },
+    {
+      "name": "simple-data-table",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "@vorzelajs/table"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-table",
+        "lib-types",
+        "styles"
+      ],
+      "description": "Lightweight data table powered by @vorzelajs/table: search, sorting and pagination.",
+      "alias": false,
+      "files": [
+        "components/ui/simple-data-table.tsx",
+        "components/ui/simple-data-table.module.scss"
+      ]
+    },
+    {
+      "name": "size-context",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-types"
+      ],
+      "description": "size-context component",
+      "alias": false,
+      "files": [
+        "components/ui/size-context.tsx"
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "skeleton component",
+      "alias": false,
+      "files": [
+        "components/ui/skeleton.tsx",
+        "components/ui/skeleton.module.scss"
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "slider component",
+      "alias": false,
+      "files": [
+        "components/ui/slider.tsx",
+        "components/ui/slider.module.scss"
+      ]
+    },
+    {
+      "name": "sonner",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "sonner component",
+      "alias": false,
+      "files": [
+        "components/ui/sonner.tsx",
+        "components/ui/sonner.module.scss"
+      ]
+    },
+    {
+      "name": "sparkline",
+      "type": "chart",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "d3"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "chart-shared",
+        "hooks",
+        "lib-cx"
+      ],
+      "description": "sparkline chart",
+      "alias": false,
+      "files": [
+        "charts/sparkline.tsx"
+      ]
+    },
+    {
+      "name": "spinner",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "spinner component",
+      "alias": false,
+      "files": [
+        "components/ui/spinner.tsx",
+        "components/ui/spinner.module.scss"
+      ]
+    },
+    {
+      "name": "stat",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "stat component",
+      "alias": false,
+      "files": [
+        "components/ui/stat.tsx",
+        "components/ui/stat.module.scss"
+      ]
+    },
+    {
+      "name": "status-dot",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "styles"
+      ],
+      "description": "status-dot component",
+      "alias": false,
+      "files": [
+        "components/ui/status-dot.tsx",
+        "components/ui/status-dot.module.scss"
+      ]
+    },
+    {
+      "name": "stepper",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "icons",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "stepper component",
+      "alias": false,
+      "files": [
+        "components/ui/stepper.tsx",
+        "components/ui/stepper.module.scss"
+      ]
+    },
+    {
+      "name": "styles",
+      "type": "style",
+      "version": "0.1.0",
+      "dependencies": [],
+      "devDependencies": [
+        "sass-embedded"
+      ],
+      "registryDependencies": [],
+      "description": "styles component",
+      "alias": false,
+      "files": [
+        "styles/_index.scss",
+        "styles/base/_base.scss",
+        "styles/base/_globals.scss",
+        "styles/base/_reset.scss",
+        "styles/global.scss",
+        "styles/mixins/_focus-ring.scss",
+        "styles/mixins/_group.scss",
+        "styles/mixins/_icon.scss",
+        "styles/mixins/_interaction.scss",
+        "styles/mixins/_scrollbar.scss",
+        "styles/mixins/_supports.scss",
+        "styles/mixins/_surface.scss",
+        "styles/mixins/_truncate.scss",
+        "styles/tokens/_breakpoints.scss",
+        "styles/tokens/_color.scss",
+        "styles/tokens/_motion.scss",
+        "styles/tokens/_radius.scss",
+        "styles/tokens/_shadow.scss",
+        "styles/tokens/_space.scss",
+        "styles/tokens/_type.scss",
+        "styles/tokens/_z.scss"
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "switch component",
+      "alias": false,
+      "files": [
+        "components/ui/switch.tsx",
+        "components/ui/switch.module.scss"
+      ]
+    },
+    {
+      "name": "tab-bar",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "tab-bar component",
+      "alias": false,
+      "files": [
+        "components/ui/tab-bar.tsx",
+        "components/ui/tab-bar.module.scss"
+      ]
+    },
+    {
+      "name": "table",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "Presentational table primitives.",
+      "alias": false,
+      "files": [
+        "components/ui/table.tsx",
+        "components/ui/table.module.scss"
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "tabs component",
+      "alias": false,
+      "files": [
+        "components/ui/tabs.tsx",
+        "components/ui/tabs.module.scss"
+      ]
+    },
+    {
+      "name": "tag-input",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "tag-input component",
+      "alias": false,
+      "files": [
+        "components/ui/tag-input.tsx",
+        "components/ui/tag-input.module.scss"
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "label",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "textarea component",
+      "alias": false,
+      "files": [
+        "components/ui/textarea.tsx",
+        "components/ui/textarea.module.scss"
+      ]
+    },
+    {
+      "name": "time-picker",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "input"
+      ],
+      "description": "time-picker component",
+      "alias": false,
+      "files": [
+        "components/ui/time-picker.tsx"
+      ]
+    },
+    {
+      "name": "timeline",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "timeline component",
+      "alias": false,
+      "files": [
+        "components/ui/timeline.tsx",
+        "components/ui/timeline.module.scss"
+      ]
+    },
+    {
+      "name": "toggle",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "toggle component",
+      "alias": false,
+      "files": [
+        "components/ui/toggle.tsx",
+        "components/ui/toggle.module.scss"
+      ]
+    },
+    {
+      "name": "toggle-group",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "lib-types",
+        "styles",
+        "toggle"
+      ],
+      "description": "toggle-group component",
+      "alias": false,
+      "files": [
+        "components/ui/toggle-group.tsx",
+        "components/ui/toggle-group.module.scss"
+      ]
+    },
+    {
+      "name": "toolbar",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "separator",
+        "styles"
+      ],
+      "description": "toolbar component",
+      "alias": false,
+      "files": [
+        "components/ui/toolbar.tsx",
+        "components/ui/toolbar.module.scss"
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "lib-types",
+        "primitives",
+        "styles"
+      ],
+      "description": "tooltip component",
+      "alias": false,
+      "files": [
+        "components/ui/tooltip.tsx",
+        "components/ui/tooltip.module.scss"
+      ]
+    },
+    {
+      "name": "topbar",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "header",
+        "lib-types"
+      ],
+      "description": "topbar component",
+      "alias": false,
+      "files": [
+        "components/ui/topbar.tsx"
+      ]
+    },
+    {
+      "name": "tour",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "button",
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "tour component",
+      "alias": false,
+      "files": [
+        "components/ui/tour.tsx",
+        "components/ui/tour.module.scss"
+      ]
+    },
+    {
+      "name": "transfer",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "button",
+        "hooks",
+        "icons",
+        "lib-cx",
+        "styles"
+      ],
+      "description": "transfer component",
+      "alias": false,
+      "files": [
+        "components/ui/transfer.tsx",
+        "components/ui/transfer.module.scss"
+      ]
+    },
+    {
+      "name": "tree-view",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "icons",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "tree-view component",
+      "alias": false,
+      "files": [
+        "components/ui/tree-view.tsx",
+        "components/ui/tree-view.module.scss"
+      ]
+    },
+    {
+      "name": "treemap-chart",
+      "type": "chart",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "d3"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "chart-shared"
+      ],
+      "description": "treemap-chart chart",
+      "alias": false,
+      "files": [
+        "charts/treemap-chart.tsx"
+      ]
+    },
+    {
+      "name": "typography",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "typography component",
+      "alias": false,
+      "files": [
+        "components/ui/typography.tsx",
+        "components/ui/typography.module.scss"
+      ]
+    },
+    {
+      "name": "virtual-list",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "hooks",
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "virtual-list component",
+      "alias": false,
+      "files": [
+        "components/ui/virtual-list.tsx",
+        "components/ui/virtual-list.module.scss"
+      ]
+    },
+    {
+      "name": "waterfall-chart",
+      "type": "chart",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom",
+        "d3"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "chart-shared"
+      ],
+      "description": "waterfall-chart chart",
+      "alias": false,
+      "files": [
+        "charts/waterfall-chart.tsx"
+      ]
+    },
+    {
+      "name": "watermark",
+      "type": "ui",
+      "version": "0.1.0",
+      "dependencies": [
+        "@vorzelajs/core",
+        "@vorzelajs/dom"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [
+        "lib-cx",
+        "lib-types",
+        "styles"
+      ],
+      "description": "watermark component",
+      "alias": false,
+      "files": [
+        "components/ui/watermark.tsx",
+        "components/ui/watermark.module.scss"
+      ]
+    }
+  ]
+}

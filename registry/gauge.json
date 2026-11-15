@@ -1,0 +1,24 @@
+{
+  "name": "gauge",
+  "type": "chart",
+  "version": "0.1.0",
+  "dependencies": [
+    "@vorzelajs/core",
+    "@vorzelajs/dom",
+    "d3"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "chart-shared",
+    "hooks",
+    "lib-cx"
+  ],
+  "files": [
+    {
+      "path": "charts/gauge.tsx",
+      "content": "import { arc } from 'd3'\nimport { effect, onCleanup, signal } from '@vorzelajs/core'\n\nimport { useContainerSize } from '~/hooks/index.ts'\nimport { cx } from '~/lib/cx.ts'\nimport { mountChart, svgElement } from './chart-dom.ts'\nimport { useAnimatedProgress } from './use-animated-progress.ts'\nimport { clamp, compactNumber } from './chart-utils.ts'\nimport type { ChartSize } from './chart-types.ts'\nimport styles from './charts.module.scss'\n\nexport function Gauge({\n  value,\n  max = 100,\n  height = 180,\n  label,\n  valueFormat = compactNumber,\n  color = 'hsl(var(--chart-1))',\n  animate = true,\n  className,\n}: {\n  value: number\n  max?: number\n  height?: number\n  label?: string\n  valueFormat?: (value: number) => string\n  color?: string\n  animate?: boolean\n  className?: string\n}) {\n  const { ref: measureRef, width } = useContainerSize<HTMLDivElement>()\n  const [host, setHost] = signal<HTMLDivElement | null>(null)\n  const progress = useAnimatedProgress({\n    enabled: animate,\n    duration: 700,\n    resetKey: `${value}:${max}`,\n  })\n\n  const ratio = clamp(value / Math.max(1, max), 0, 1)\n  const centerY = height - 14\n  const start = -Math.PI / 2\n  const end = Math.PI / 2\n\n  effect(() => {\n    const node = host()\n    if (!node) return\n    const measured = width()\n    if (measured <= 0) return\n\n    onCleanup(\n      mountChart(node, () => {\n        const size: ChartSize = { width: measured, height }\n        const radius = Math.max(1, Math.min(size.width / 2 - 16, centerY - 10))\n        const inner = radius * 0.72\n        const arcGen = arc<{ startAngle: number; endAngle: number }>()\n          .innerRadius(inner)\n          .outerRadius(radius)\n          .cornerRadius(4)\n\n        return svgElement(\n          'svg',\n          {\n            width: measured,\n            height,\n            viewBox: `0 0 ${measured} ${height}`,\n            'aria-hidden': 'true',\n          },\n          [\n            svgElement(\n              'g',\n              { transform: `translate(${measured / 2},${centerY})` },\n              [\n                svgElement('path', {\n                  d: arcGen({ startAngle: start, endAngle: end }) ?? '',\n                  fill: 'hsl(var(--muted))',\n                }),\n                svgElement('path', {\n                  d: () =>\n                    arcGen({\n                      startAngle: start,\n                      endAngle: start + (end - start) * ratio * progress(),\n                    }) ?? '',\n                  fill: color,\n                }),\n                svgElement(\n                  'text',\n                  {\n                    y: -radius * 0.34,\n                    'text-anchor': 'middle',\n                    'dominant-baseline': 'middle',\n                    class: styles.centerValue,\n                  },\n                  [valueFormat(value)],\n                ),\n                label\n                  ? svgElement(\n                      'text',\n                      {\n                        y: -radius * 0.06,\n                        'text-anchor': 'middle',\n                        'dominant-baseline': 'middle',\n                        class: styles.tick,\n                      },\n                      [label],\n                    )\n                  : null,\n              ],\n            ),\n          ],\n        )\n      }),\n    )\n  })\n\n  return (\n    <div\n      ref={(node) => {\n        const element = node as HTMLDivElement | null\n        measureRef(element)\n        setHost(element)\n      }}\n      className={cx(styles.fluid, className)}\n      style={{ height }}\n      role=\"img\"\n      aria-label={`${label ?? 'Gauge'}: ${valueFormat(value)} of ${valueFormat(max)}`}\n    />\n  )\n}\n"
+    }
+  ],
+  "description": "gauge chart",
+  "alias": false
+}

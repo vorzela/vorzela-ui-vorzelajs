@@ -1,0 +1,63 @@
+{
+  "name": "hooks",
+  "type": "hook",
+  "version": "0.1.0",
+  "dependencies": [
+    "@vorzelajs/core",
+    "@vorzelajs/dom"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "hooks/index.ts",
+      "content": "import {\n  effect,\n  onCleanup,\n  signal,\n  type Accessor,\n} from '@vorzelajs/core'\n\nexport type SetState<T> = (next: T | ((prev: T) => T)) => void\n\n/** Accepts a plain value or an accessor; components use it for reactive props. */\nexport function accessorOf<T>(value: T | Accessor<T>): Accessor<T> {\n  return typeof value === 'function' ? (value as Accessor<T>) : () => value\n}\n\nlet nextGeneratedId = 0\n\n/**\n * Stable id for label/aria wiring. Pass an explicit id when SSR and client\n * markup must match exactly; generated ids follow render order.\n */\nexport function useId(prefix = 'vz'): string {\n  nextGeneratedId += 1\n  return `${prefix}-${nextGeneratedId}`\n}\n\n/**\n * Controlled/uncontrolled state. Reads are accessors so bindings track updates.\n * Pass `value` when the parent owns the state.\n */\nexport function useControllableState<T>({\n  value,\n  defaultValue,\n  onChange,\n}: {\n  value?: T\n  defaultValue: T\n  onChange?: (value: T) => void\n}): readonly [Accessor<T>, SetState<T>] {\n  const [internal, setInternal] = signal(defaultValue)\n  const current: Accessor<T> = () =>\n    value !== undefined ? value : internal()\n  const setValue: SetState<T> = (next) => {\n    const resolved =\n      typeof next === 'function'\n        ? (next as (prev: T) => T)(current())\n        : next\n    if (value === undefined) setInternal(resolved)\n    onChange?.(resolved)\n  }\n  return [current, setValue] as const\n}\n\n/** `false` during SSR and the first client pass, then true after mount. */\nexport function useMounted(): Accessor<boolean> {\n  const [mounted, setMounted] = signal(false)\n  effect(() => {\n    setMounted(true)\n  })\n  return mounted\n}\n\n/** SSR-safe media query subscription. Server snapshot is false. */\nexport function useMediaQuery(query: string): Accessor<boolean> {\n  const [matches, setMatches] = signal(false)\n\n  effect(() => {\n    if (typeof window === 'undefined' || !window.matchMedia) return\n    const media = window.matchMedia(query)\n    const update = () => setMatches(media.matches)\n    update()\n    media.addEventListener('change', update)\n    onCleanup(() => media.removeEventListener('change', update))\n  })\n\n  return matches\n}\n\n/** True when the browser reports a network connection. */\nexport function useOnlineStatus(): Accessor<boolean> {\n  const [online, setOnline] = signal(\n    typeof navigator === 'undefined' ? true : navigator.onLine,\n  )\n\n  effect(() => {\n    if (typeof window === 'undefined') return\n    const update = () => setOnline(navigator.onLine)\n    update()\n    window.addEventListener('online', update)\n    window.addEventListener('offline', update)\n    onCleanup(() => {\n      window.removeEventListener('online', update)\n      window.removeEventListener('offline', update)\n    })\n  })\n\n  return online\n}\n\nconst REDUCED_MOTION = '(prefers-reduced-motion: reduce)'\n\n/** True when the user asks for reduced motion. SSR-safe. */\nexport function useReducedMotion(): Accessor<boolean> {\n  return useMediaQuery(REDUCED_MOTION)\n}\n\nexport function useIsomorphicLayoutEffect(fn: () => void | (() => void)): void {\n  effect(() => {\n    const cleanup = fn()\n    if (typeof cleanup === 'function') onCleanup(cleanup)\n  })\n}\n\n/** Latest value without tracking; accepts a value or an accessor. */\nexport function useLatest<T>(value: T | Accessor<T>): Accessor<T> {\n  return () =>\n    typeof value === 'function' ? (value as Accessor<T>)() : (value as T)\n}\n\nexport type CopyState = 'idle' | 'copied' | 'error'\n\n/** Clipboard copy with a self-clearing status and no leaked timers. */\nexport function useCopyToClipboard(resetAfterMs = 1800): {\n  state: Accessor<CopyState>\n  copy: (value: string) => Promise<void>\n  reset: () => void\n} {\n  const [state, setState] = signal<CopyState>('idle')\n  let timer: ReturnType<typeof setTimeout> | null = null\n\n  const clearTimer = (): void => {\n    if (timer) {\n      clearTimeout(timer)\n      timer = null\n    }\n  }\n\n  onCleanup(clearTimer)\n\n  const copy = async (value: string): Promise<void> => {\n    clearTimer()\n    try {\n      if (!navigator.clipboard?.writeText) throw new Error('unsupported')\n      await navigator.clipboard.writeText(value)\n      setState('copied')\n    } catch {\n      setState('error')\n    }\n    timer = setTimeout(() => {\n      setState('idle')\n      timer = null\n    }, resetAfterMs)\n    ;(timer as { unref?: () => void }).unref?.()\n  }\n\n  return {\n    state,\n    copy,\n    reset: () => setState('idle'),\n  }\n}\n\nexport type Hotkey = {\n  key: string\n  meta?: boolean\n  ctrl?: boolean\n  alt?: boolean\n  shift?: boolean\n}\n\nfunction isEditable(target: EventTarget | null): boolean {\n  if (!(target instanceof HTMLElement)) return false\n  return (\n    target.isContentEditable ||\n    ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)\n  )\n}\n\n/** Global hotkeys. Editable targets are ignored unless `allowInInputs`. */\nexport function useHotkeys(\n  hotkeys: Array<Hotkey & { handler: (event: KeyboardEvent) => void }>,\n  options: { allowInInputs?: boolean; enabled?: boolean } = {},\n): void {\n  effect(() => {\n    if (typeof window === 'undefined' || options.enabled === false) return\n\n    const onKeyDown = (event: KeyboardEvent): void => {\n      if (!options.allowInInputs && isEditable(event.target)) return\n      for (const hotkey of hotkeys) {\n        if (event.key.toLowerCase() !== hotkey.key.toLowerCase()) continue\n        if (!!hotkey.meta !== event.metaKey) continue\n        if (!!hotkey.ctrl !== event.ctrlKey) continue\n        if (!!hotkey.alt !== event.altKey) continue\n        if (!!hotkey.shift !== event.shiftKey) continue\n        event.preventDefault()\n        hotkey.handler(event)\n        break\n      }\n    }\n\n    window.addEventListener('keydown', onKeyDown)\n    onCleanup(() => window.removeEventListener('keydown', onKeyDown))\n  })\n}\n\nexport type ContainerSize = {\n  width: number\n  height: number\n}\n\n/**\n * Observe a container's size. The observer and resize listener are disconnected\n * with the owner, not left to component lifetime.\n */\nexport function useContainerSize<T extends HTMLElement = HTMLDivElement>(): {\n  ref: (node: T | null) => void\n  size: Accessor<ContainerSize>\n  width: Accessor<number>\n  height: Accessor<number>\n  matches: (px: number) => boolean\n} {\n  const [size, setSize] = signal<ContainerSize>({ width: 0, height: 0 })\n  let observer: ResizeObserver | null = null\n  let observed: T | null = null\n\n  const measure = (): void => {\n    if (!observed) return\n    const rect = observed.getBoundingClientRect()\n    setSize((previous) =>\n      previous.width === rect.width && previous.height === rect.height\n        ? previous\n        : { width: rect.width, height: rect.height },\n    )\n  }\n\n  const disconnect = (): void => {\n    observer?.disconnect()\n    observer = null\n    if (typeof window !== 'undefined') {\n      window.removeEventListener('resize', measure)\n    }\n  }\n\n  const ref = (node: T | null): void => {\n    disconnect()\n    observed = node\n    if (!node || typeof window === 'undefined') return\n\n    measure()\n    observer =\n      typeof ResizeObserver === 'undefined'\n        ? null\n        : new ResizeObserver((entries) => {\n            const entry = entries[0]\n            if (!entry) return\n            const box = entry.contentRect\n            setSize((previous) =>\n              previous.width === box.width && previous.height === box.height\n                ? previous\n                : { width: box.width, height: box.height },\n            )\n          })\n    observer?.observe(node)\n    window.addEventListener('resize', measure)\n  }\n\n  onCleanup(disconnect)\n\n  return {\n    ref,\n    size,\n    width: () => size().width,\n    height: () => size().height,\n    matches: (px) => size().width >= px,\n  }\n}\n\nexport function useContainerQuery(px: number): {\n  ref: (node: HTMLDivElement | null) => void\n  width: Accessor<number>\n  matches: Accessor<boolean>\n} {\n  const { ref, width } = useContainerSize()\n  return { ref, width, matches: () => width() >= px }\n}\n"
+    },
+    {
+      "path": "hooks/use-container-size.ts",
+      "content": "export { useContainerSize, useContainerQuery } from './index.ts'\nexport type { ContainerSize } from './index.ts'\n"
+    },
+    {
+      "path": "hooks/use-controllable-state.ts",
+      "content": "export { useControllableState } from './index.ts'\nexport type { SetState } from './index.ts'\n"
+    },
+    {
+      "path": "hooks/use-copy-to-clipboard.ts",
+      "content": "export { useCopyToClipboard } from './index.ts'\nexport type { CopyState } from './index.ts'\n"
+    },
+    {
+      "path": "hooks/use-hotkeys.ts",
+      "content": "export { useHotkeys } from './index.ts'\nexport type { Hotkey } from './index.ts'\n"
+    },
+    {
+      "path": "hooks/use-id.ts",
+      "content": "export { useId } from './index.ts'\n"
+    },
+    {
+      "path": "hooks/use-isomorphic-layout-effect.ts",
+      "content": "import { effect, onCleanup } from '@vorzelajs/core'\n\nexport function useIsomorphicLayoutEffect(fn: () => void | (() => void)): void {\n  effect(() => {\n    const cleanup = fn()\n    if (typeof cleanup === 'function') onCleanup(cleanup)\n  })\n}\n"
+    },
+    {
+      "path": "hooks/use-latest.ts",
+      "content": "export { useLatest } from './index.ts'\n"
+    },
+    {
+      "path": "hooks/use-media-query.ts",
+      "content": "export { useMediaQuery } from './index.ts'\n"
+    },
+    {
+      "path": "hooks/use-mounted.ts",
+      "content": "export { useMounted } from './index.ts'\n"
+    },
+    {
+      "path": "hooks/use-online-status.ts",
+      "content": "export { useOnlineStatus } from './index.ts'\n"
+    },
+    {
+      "path": "hooks/use-reduced-motion.ts",
+      "content": "export { useReducedMotion } from './index.ts'\n"
+    }
+  ],
+  "description": "hooks component",
+  "alias": false
+}

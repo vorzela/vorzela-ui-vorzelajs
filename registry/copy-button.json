@@ -1,0 +1,30 @@
+{
+  "name": "copy-button",
+  "type": "ui",
+  "version": "0.1.0",
+  "dependencies": [
+    "@vorzelajs/core",
+    "@vorzelajs/dom"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button",
+    "hooks",
+    "icons",
+    "lib-cx",
+    "primitives",
+    "styles"
+  ],
+  "files": [
+    {
+      "path": "components/ui/copy-button.tsx",
+      "content": "import { Show } from '@vorzelajs/dom'\n\nimport { useCopyToClipboard } from '~/hooks/index.ts'\nimport { cx } from '~/lib/cx.ts'\nimport { VisuallyHidden } from '~/components/primitives/visually-hidden.tsx'\nimport { Button } from './button.tsx'\nimport type { ButtonSize, ButtonVariant } from './button.tsx'\nimport { Check, Copy } from './icons.tsx'\nimport styles from './copy-button.module.scss'\n\nexport interface CopyButtonProps {\n  value: string\n  label?: string\n  copiedLabel?: string\n  variant?: ButtonVariant\n  size?: ButtonSize\n  className?: string\n}\n\n/** Copies a value on a user gesture and announces the result. */\nexport function CopyButton({\n  value,\n  label = 'Copy',\n  copiedLabel = 'Copied',\n  variant = 'outline',\n  size = 'sm',\n  className,\n}: CopyButtonProps) {\n  const { state, copy } = useCopyToClipboard()\n  const copied = (): boolean => state() === 'copied'\n\n  return (\n    <span className={cx(styles.root, className)}>\n      <Button\n        type=\"button\"\n        variant={variant}\n        size={size}\n        onClick={() => void copy(value)}\n      >\n        <Show\n          when={copied}\n          fallback={\n            <>\n              <Copy aria-hidden />\n              {label}\n            </>\n          }\n        >\n          <Check className={styles.successIcon} aria-hidden />\n          {copiedLabel}\n        </Show>\n      </Button>\n      <VisuallyHidden role=\"status\" aria-live=\"polite\">\n        {() =>\n          copied()\n            ? 'Copied to clipboard'\n            : state() === 'error'\n              ? 'Copy failed'\n              : ''\n        }\n      </VisuallyHidden>\n    </span>\n  )\n}\n"
+    },
+    {
+      "path": "components/ui/copy-button.module.scss",
+      "content": "@use 'styles' as vz;\n\n.root {\n  position: relative;\n  display: inline-flex;\n}\n\n.success-icon {\n  color: vz.color('success');\n}\n"
+    }
+  ],
+  "description": "copy-button component",
+  "alias": false
+}

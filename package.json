@@ -1,0 +1,35 @@
+{
+  "name": "vorzela-ui-vorzelajs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "VorzelaJS UI components copied into your app, shadcn-style.",
+  "license": "MIT",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "registry:build": "node scripts/build-registry.mjs",
+    "cli": "node packages/cli/bin/vorzelajs-ui.mjs",
+    "verify": "npm run registry:build && npm run typecheck && npm test"
+  },
+  "dependencies": {
+    "@vorzelajs/core": "0.0.21",
+    "@vorzelajs/dom": "0.0.21",
+    "@vorzelajs/table": "0.0.21",
+    "d3": "^7.9.2",
+    "d3-sankey": "^0.12.3",
+    "lucide": "^1.72.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/d3-sankey": "^0.12.5",
+    "@types/node": "^24.19.2",
+    "@vorzelajs/server": "0.0.21",
+    "dompurify": "^3.4.17",
+    "jsdom": "^29.1.1",
+    "sass-embedded": "^1.107.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.7",
+    "vitest": "^5.1.0"
+  }
+}

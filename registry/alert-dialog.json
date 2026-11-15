@@ -1,0 +1,31 @@
+{
+  "name": "alert-dialog",
+  "type": "ui",
+  "version": "0.1.0",
+  "dependencies": [
+    "@vorzelajs/core",
+    "@vorzelajs/dom"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button",
+    "hooks",
+    "lib-cx",
+    "lib-overlay",
+    "lib-types",
+    "primitives",
+    "styles"
+  ],
+  "files": [
+    {
+      "path": "components/ui/alert-dialog.tsx",
+      "content": "/**\n * components/ui/alert-dialog.tsx\n *\n * Confirmation dialog — focus-trapped, scroll-lock safe.\n */\nimport { effect, onCleanup, signal } from '@vorzelajs/core'\nimport { Show } from '@vorzelajs/dom'\nimport { accessorOf } from '~/hooks/index.ts'\nimport { useId } from '~/hooks/use-id.ts'\nimport { cx } from '~/lib/cx.ts'\nimport { lockBodyScroll, trapFocus } from '~/lib/overlay.ts'\nimport type { ReactNode } from '~/lib/types.ts'\nimport { Portal } from '~/components/primitives/portal.tsx'\nimport { Button } from './button.tsx'\nimport styles from './alert-dialog.module.scss'\n\nexport interface AlertDialogProps {\n  open: boolean | (() => boolean)\n  onOpenChange: (open: boolean) => void\n  title?: string\n  description?: string\n  cancelText?: string\n  actionText?: string\n  onAction?: () => void\n  onCancel?: () => void\n  destructive?: boolean\n  className?: string\n  children?: ReactNode\n}\n\nexport function AlertDialog({\n  open,\n  onOpenChange,\n  title,\n  description,\n  cancelText = 'Cancel',\n  actionText = 'Continue',\n  onAction,\n  onCancel,\n  destructive = false,\n  className,\n  children,\n}: AlertDialogProps) {\n  const titleId = useId('alert-dialog-title')\n  const descId = useId('alert-dialog-description')\n  const [panel, setPanel] = signal<HTMLDivElement | null>(null)\n  const isOpen = accessorOf(open)\n\n  effect(() => {\n    const node = panel()\n    if (!isOpen() || !node || typeof document === 'undefined') return\n    const unlock = lockBodyScroll()\n    const releaseTrap = trapFocus(node, () => onOpenChange(false))\n    onCleanup(() => {\n      releaseTrap()\n      unlock()\n    })\n  })\n\n  const handleCancel = (): void => {\n    onCancel?.()\n    onOpenChange(false)\n  }\n\n  const handleAction = (): void => {\n    onAction?.()\n  }\n\n  return (\n    <Show when={isOpen}>\n      {() => {\n        const content = (\n          <Portal>\n            <div className={styles.root}>\n              <div\n                className={styles.overlay}\n                aria-hidden=\"true\"\n                onClick={handleCancel}\n              />\n\n              <div\n                ref={(element) => setPanel(element as HTMLDivElement)}\n                role=\"alertdialog\"\n                aria-modal=\"true\"\n                aria-labelledby={title ? titleId : undefined}\n                aria-describedby={description ? descId : undefined}\n                tabIndex={-1}\n                className={cx(styles.panel, className)}\n                onClick={(event) => event.stopPropagation()}\n              >\n                <div className={styles.content}>\n                  {title ? (\n                    <h2 id={titleId} className={styles.title}>\n                      {title}\n                    </h2>\n                  ) : null}\n\n                  {description ? (\n                    <p id={descId} className={styles.description}>\n                      {description}\n                    </p>\n                  ) : null}\n\n                  {children}\n                </div>\n\n                <div className={styles.actions}>\n                  <Button variant=\"outline\" onClick={handleCancel}>\n                    {cancelText}\n                  </Button>\n                  <Button\n                    variant={destructive ? 'destructive' : 'primary'}\n                    onClick={handleAction}\n                  >\n                    {actionText}\n                  </Button>\n                </div>\n              </div>\n            </div>\n          </Portal>\n        )\n\n        onCleanup(() => setPanel(null))\n        return content\n      }}\n    </Show>\n  )\n}\n\nexport { AlertDialog as ConfirmationDialog }\n"
+    },
+    {
+      "path": "components/ui/alert-dialog.module.scss",
+      "content": "@use 'styles' as vz;\n\n.root {\n  position: fixed;\n  inset: 0;\n  z-index: vz.z('modal');\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: vz.space(4);\n}\n\n.overlay {\n  position: absolute;\n  inset: 0;\n  background: vz.color('foreground', 0.45);\n  backdrop-filter: blur(6px);\n  animation: vz-alert-dialog-overlay-in vz.duration('base') vz.ease('out') both;\n\n  @include vz.motion-reduce {\n    animation: none;\n  }\n}\n\n.panel {\n  position: relative;\n  width: 100%;\n  max-width: 28rem;\n  border: 1px solid vz.color('border', 0.8);\n  border-radius: vz.radius('2xl');\n  background: vz.color('card');\n  color: vz.color('card-foreground');\n  box-shadow: vz.elevation(3);\n  outline: none;\n  animation: vz-alert-dialog-in vz.duration('slow') vz.ease('out') both;\n\n  @include vz.motion-reduce {\n    animation: none;\n  }\n}\n\n.content {\n  display: flex;\n  flex-direction: column;\n  gap: vz.space(2);\n  padding: vz.space(6) vz.space(6) 0;\n}\n\n.title {\n  margin: 0;\n  color: vz.color('foreground');\n  font-size: vz.font-size('lg');\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.01em;\n}\n\n.description {\n  margin: 0;\n  color: vz.color('muted-foreground');\n  font-size: vz.font-size('sm');\n  line-height: 1.5;\n}\n\n.actions {\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  gap: vz.space(2);\n  padding: vz.space(4) vz.space(6);\n}\n\n@keyframes vz-alert-dialog-overlay-in {\n  from {\n    opacity: 0;\n  }\n\n  to {\n    opacity: 1;\n  }\n}\n\n@keyframes vz-alert-dialog-in {\n  from {\n    opacity: 0;\n    transform: translateY(8px) scale(0.98);\n  }\n\n  to {\n    opacity: 1;\n    transform: none;\n  }\n}\n"
+    }
+  ],
+  "description": "alert-dialog component",
+  "alias": false
+}

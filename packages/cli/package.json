@@ -1,0 +1,17 @@
+{
+  "name": "@vorzela/vorzelajs-ui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Add VorzelaJS UI components to your app, shadcn-style.",
+  "bin": {
+    "vorzelajs-ui": "./bin/vorzelajs-ui.mjs"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}

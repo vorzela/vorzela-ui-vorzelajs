@@ -1,0 +1,37 @@
+{
+  "name": "charts",
+  "type": "chart",
+  "version": "0.1.0",
+  "dependencies": [
+    "@vorzelajs/core",
+    "@vorzelajs/dom"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "bar-chart",
+    "bullet-chart",
+    "candlestick-chart",
+    "chart-shared",
+    "donut-chart",
+    "funnel-chart",
+    "gauge",
+    "heatmap",
+    "histogram-chart",
+    "line-chart",
+    "radar-chart",
+    "radial-bar-chart",
+    "sankey-chart",
+    "scatter-chart",
+    "sparkline",
+    "treemap-chart",
+    "waterfall-chart"
+  ],
+  "files": [
+    {
+      "path": "charts/index.ts",
+      "content": "export * from './chart-types.ts'\nexport * from './chart-utils.ts'\nexport * from './chart-colors.ts'\nexport * from './chart-frame.tsx'\nexport * from './chart-tooltip.tsx'\nexport * from './line-chart.tsx'\nexport * from './bar-chart.tsx'\nexport * from './donut-chart.tsx'\nexport * from './scatter-chart.tsx'\nexport * from './heatmap.tsx'\nexport * from './sparkline.tsx'\nexport * from './gauge.tsx'\nexport * from './radar-chart.tsx'\nexport * from './treemap-chart.tsx'\nexport * from './sankey-chart.tsx'\nexport * from './funnel-chart.tsx'\nexport * from './candlestick-chart.tsx'\nexport * from './waterfall-chart.tsx'\nexport * from './histogram-chart.tsx'\nexport * from './radial-bar-chart.tsx'\nexport * from './bullet-chart.tsx'\n"
+    }
+  ],
+  "description": "All charts and the chart index",
+  "alias": false
+}

@@ -1,0 +1,27 @@
+{
+  "name": "number-ticker",
+  "type": "ui",
+  "version": "0.1.0",
+  "dependencies": [
+    "@vorzelajs/core",
+    "@vorzelajs/dom"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "hooks",
+    "lib-cx",
+    "styles"
+  ],
+  "files": [
+    {
+      "path": "components/ui/number-ticker.tsx",
+      "content": "import { effect, onCleanup, signal } from '@vorzelajs/core'\nimport { accessorOf, useReducedMotion } from '~/hooks/index.ts'\nimport { cx } from '~/lib/cx.ts'\nimport styles from './number-ticker.module.scss'\n\nfunction easeOutCubic(t: number): number {\n  return 1 - (1 - t) ** 3\n}\n\nexport interface NumberTickerProps {\n  value: number | (() => number)\n  from?: number\n  duration?: number\n  format?: (value: number) => string\n  className?: string\n  suffix?: string\n}\n\nexport function NumberTicker({\n  value,\n  from = 0,\n  duration = 700,\n  format = (current) => Math.round(current).toLocaleString(),\n  className,\n  suffix,\n}: NumberTickerProps) {\n  const reduced = useReducedMotion()\n  const valueAccessor = accessorOf(value)\n  const [display, setDisplay] = signal(from)\n  let previous = from\n\n  effect(() => {\n    const target = valueAccessor()\n    if (\n      reduced() ||\n      typeof requestAnimationFrame === 'undefined' ||\n      typeof performance === 'undefined'\n    ) {\n      previous = target\n      setDisplay(target)\n      return\n    }\n\n    const start = performance.now()\n    const initial = previous\n    let frame = 0\n\n    const tick = (now: number): void => {\n      const progress = Math.min(1, (now - start) / duration)\n      const next = initial + (target - initial) * easeOutCubic(progress)\n      setDisplay(next)\n      if (progress < 1) {\n        frame = requestAnimationFrame(tick)\n      } else {\n        previous = target\n      }\n    }\n\n    frame = requestAnimationFrame(tick)\n    const fallback = setTimeout(() => {\n      setDisplay(target)\n      previous = target\n    }, duration + 120)\n    fallback.unref?.()\n\n    onCleanup(() => {\n      cancelAnimationFrame(frame)\n      clearTimeout(fallback)\n    })\n  })\n\n  return (\n    <span className={cx(styles.root, className)}>\n      <span aria-hidden>\n        {() => `${format(display())}${suffix ?? ''}`}\n      </span>\n      <span className={styles.srOnly}>\n        {() => `${format(valueAccessor())}${suffix ?? ''}`}\n      </span>\n    </span>\n  )\n}\n"
+    },
+    {
+      "path": "components/ui/number-ticker.module.scss",
+      "content": "@use 'styles' as vz;\n\n.root {\n  position: relative;\n  font-variant-numeric: tabular-nums;\n}\n\n.sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip-path: inset(50%);\n  white-space: nowrap;\n  border-width: 0;\n}\n"
+    }
+  ],
+  "description": "number-ticker component",
+  "alias": false
+}

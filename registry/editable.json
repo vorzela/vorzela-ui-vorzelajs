@@ -1,0 +1,28 @@
+{
+  "name": "editable",
+  "type": "ui",
+  "version": "0.1.0",
+  "dependencies": [
+    "@vorzelajs/core",
+    "@vorzelajs/dom"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "hooks",
+    "icons",
+    "lib-cx",
+    "styles"
+  ],
+  "files": [
+    {
+      "path": "components/ui/editable.tsx",
+      "content": "import { effect, signal } from '@vorzelajs/core'\nimport { Show } from '@vorzelajs/dom'\n\nimport { accessorOf, useId } from '~/hooks/index.ts'\nimport { cx } from '~/lib/cx.ts'\nimport { Pencil } from './icons.tsx'\nimport styles from './editable.module.scss'\n\nexport interface EditableProps {\n  value?: string | (() => string)\n  defaultValue?: string\n  onSave?: (value: string) => void\n  label?: string\n  placeholder?: string\n  className?: string\n  id?: string\n}\n\n/** Click-to-edit text. Enter saves, Escape cancels, blur saves. */\nexport function Editable({\n  value: valueProp,\n  defaultValue = '',\n  onSave,\n  label = 'Value',\n  placeholder = 'Click to edit',\n  className,\n  id,\n}: EditableProps) {\n  const inputId = id ?? useId('editable')\n  const [uncontrolled, setUncontrolled] = signal(defaultValue)\n  const controlled =\n    valueProp === undefined ? null : accessorOf<string>(valueProp)\n  const value = (): string => (controlled ? controlled() : uncontrolled())\n\n  const [editing, setEditing] = signal(false)\n  const [draft, setDraft] = signal(value())\n  const [input, setInput] = signal<HTMLInputElement | null>(null)\n\n  effect(() => {\n    const next = value()\n    if (!editing()) setDraft(next)\n  })\n\n  // The input is created and inserted by Show after the edit state flips, so\n  // focus lands in the microtask once the node is actually in the document.\n  effect(() => {\n    if (!editing()) return\n    const node = input()\n    if (!node || typeof queueMicrotask !== 'function') return\n\n    queueMicrotask(() => {\n      if (editing() && node.isConnected) node.focus()\n    })\n  })\n\n  const commit = (): void => {\n    const next = draft()\n    if (next !== value()) {\n      if (!controlled) setUncontrolled(next)\n      onSave?.(next)\n    }\n    setEditing(false)\n  }\n\n  return (\n    <div className={cx(styles.root, className)}>\n      <label htmlFor={inputId} className={styles.label}>\n        {label}\n      </label>\n      <Show\n        when={editing}\n        fallback={() => (\n          <button\n            type=\"button\"\n            id={inputId}\n            className={styles.trigger}\n            onClick={() => setEditing(true)}\n          >\n            <span\n              className={() =>\n                cx(styles.value, !value() && styles.placeholder)\n              }\n            >\n              {() => value() || placeholder}\n            </span>\n            <span className={styles.pencil}>\n              <Pencil aria-hidden />\n            </span>\n          </button>\n        )}\n      >\n        {() => (\n          <input\n            ref={(node) => setInput(node as HTMLInputElement)}\n            id={inputId}\n            className={styles.input}\n            value={() => draft()}\n            onChange={(event) =>\n              setDraft((event.currentTarget as HTMLInputElement).value)\n            }\n            onBlur={commit}\n            onKeyDown={(event) => {\n              if (event.key === 'Enter') {\n                event.preventDefault()\n                commit()\n              }\n              if (event.key === 'Escape') {\n                event.preventDefault()\n                setDraft(value())\n                setEditing(false)\n              }\n            }}\n          />\n        )}\n      </Show>\n    </div>\n  )\n}\n"
+    },
+    {
+      "path": "components/ui/editable.module.scss",
+      "content": "@use 'styles' as vz;\n\n.root {\n  display: flex;\n  flex-direction: column;\n  gap: vz.space(1);\n}\n\n.label {\n  color: vz.color('muted-foreground');\n  font-size: vz.font-size('xs');\n  font-weight: 600;\n}\n\n.trigger {\n  display: flex;\n  min-height: vz.space(9);\n  align-items: center;\n  justify-content: space-between;\n  gap: vz.space(2);\n  padding: vz.space(1.5) vz.space(2.5);\n  border: 1px dashed vz.color('border');\n  border-radius: vz.radius('md');\n  background: transparent;\n  color: vz.color('foreground');\n  font: inherit;\n  text-align: left;\n  cursor: text;\n\n  @include vz.hover {\n    background: vz.color('accent');\n  }\n\n  @include vz.focus-ring(2px, 2px, 0.6);\n}\n\n.value {\n  min-width: 0;\n\n  @include vz.truncate;\n}\n\n.placeholder {\n  color: vz.color('muted-foreground');\n}\n\n.pencil {\n  flex: none;\n  color: vz.color('muted-foreground');\n\n  svg {\n    @include vz.icon(3.5);\n  }\n}\n\n.input {\n  width: 100%;\n  min-height: vz.space(9);\n  padding: vz.space(1.5) vz.space(2.5);\n  border: 1px solid vz.color('primary');\n  border-radius: vz.radius('md');\n  background: vz.color('card');\n  color: vz.color('foreground');\n  font: inherit;\n  outline: none;\n  box-shadow: 0 0 0 3px vz.color('primary', 0.18);\n}\n"
+    }
+  ],
+  "description": "editable component",
+  "alias": false
+}

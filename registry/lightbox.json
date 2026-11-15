@@ -1,0 +1,29 @@
+{
+  "name": "lightbox",
+  "type": "ui",
+  "version": "0.1.0",
+  "dependencies": [
+    "@vorzelajs/core",
+    "@vorzelajs/dom"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "hooks",
+    "icons",
+    "lib-cx",
+    "primitives",
+    "styles"
+  ],
+  "files": [
+    {
+      "path": "components/ui/lightbox.tsx",
+      "content": "import { effect, onCleanup } from '@vorzelajs/core'\nimport { Show } from '@vorzelajs/dom'\nimport { accessorOf } from '~/hooks/index.ts'\nimport { cx } from '~/lib/cx.ts'\nimport { Portal } from '~/components/primitives/portal.tsx'\nimport { X } from './icons.tsx'\nimport styles from './lightbox.module.scss'\n\nexport interface LightboxProps {\n  open: boolean | (() => boolean)\n  src: string\n  alt?: string\n  onClose: () => void\n  caption?: string\n  className?: string\n}\n\nfunction LightboxPanel(props: Omit<LightboxProps, 'open'>) {\n  effect(() => {\n    const onKeyDown = (event: KeyboardEvent): void => {\n      if (event.key === 'Escape') props.onClose()\n    }\n    document.addEventListener('keydown', onKeyDown)\n    onCleanup(() => document.removeEventListener('keydown', onKeyDown))\n  })\n\n  return (\n    <Portal>\n      <div\n        className={cx(styles.root, props.className)}\n        role=\"dialog\"\n        aria-modal=\"true\"\n        aria-label={props.alt || 'Image preview'}\n        onClick={() => props.onClose()}\n      >\n        <button\n          type=\"button\"\n          className={styles.close}\n          onClick={(event) => {\n            event.stopPropagation()\n            props.onClose()\n          }}\n          aria-label=\"Close\"\n        >\n          <X aria-hidden />\n        </button>\n        <figure className={styles.figure} onClick={(event) => event.stopPropagation()}>\n          <img className={styles.image} src={props.src} alt={props.alt ?? ''} />\n          {props.caption ? <figcaption className={styles.caption}>{props.caption}</figcaption> : null}\n        </figure>\n      </div>\n    </Portal>\n  )\n}\n\n/** Full-screen image viewer. */\nexport function Lightbox({ open, ...props }: LightboxProps) {\n  const isOpen = accessorOf(open)\n  return (\n    <Show when={isOpen}>\n      {() => <LightboxPanel {...props} />}\n    </Show>\n  )\n}\n"
+    },
+    {
+      "path": "components/ui/lightbox.module.scss",
+      "content": "@use 'styles' as vz;\n\n.root {\n  position: fixed;\n  inset: 0;\n  z-index: vz.z('modal');\n  display: grid;\n  place-items: center;\n  padding: vz.space(6);\n  background: rgb(0 0 0 / 0.82);\n}\n\n.close {\n  position: absolute;\n  top: vz.space(4);\n  right: vz.space(4);\n  display: grid;\n  place-items: center;\n  width: vz.space(10);\n  height: vz.space(10);\n  border-radius: 50%;\n  color: white;\n  background: rgb(255 255 255 / 0.12);\n\n  svg {\n    width: 20px;\n    height: 20px;\n  }\n}\n\n.figure {\n  max-width: min(92vw, 80rem);\n  max-height: 88vh;\n  margin: 0;\n}\n\n.image {\n  max-width: 100%;\n  max-height: 82vh;\n  border-radius: vz.radius('lg');\n  object-fit: contain;\n}\n\n.caption {\n  margin-top: vz.space(3);\n  color: rgb(255 255 255 / 0.78);\n  font-size: vz.font-size('sm');\n  text-align: center;\n}\n"
+    }
+  ],
+  "description": "lightbox component",
+  "alias": false
+}

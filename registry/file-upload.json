@@ -1,0 +1,21 @@
+{
+  "name": "file-upload",
+  "type": "ui",
+  "version": "0.1.0",
+  "dependencies": [
+    "@vorzelajs/core",
+    "@vorzelajs/dom"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "file-picker"
+  ],
+  "files": [
+    {
+      "path": "components/ui/file-upload.tsx",
+      "content": "/**\n * Backwards-compatible dropzone wrapper around the FilePicker.\n *\n * `FileUpload` keeps the original dropzone API; use `FilePicker` directly for\n * the button, compact, tile and avatar variants.\n */\nimport { FilePicker, type FilePickerProps } from './file-picker.tsx'\n\nexport type FileUploadProps = Omit<FilePickerProps, 'variant'>\n\nexport function FileUpload({ className, ...props }: FileUploadProps) {\n  return <FilePicker {...props} variant=\"dropzone\" className={className} />\n}\n\n/** Familiar alias for the file picker / upload surface. */\nexport { FilePicker } from './file-picker.tsx'\nexport type { FilePickerProps } from './file-picker.tsx'\n"
+    }
+  ],
+  "description": "file-upload component",
+  "alias": false
+}

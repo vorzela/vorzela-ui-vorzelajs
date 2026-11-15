@@ -1,0 +1,23 @@
+{
+  "name": "time-picker",
+  "type": "ui",
+  "version": "0.1.0",
+  "dependencies": [
+    "@vorzelajs/core",
+    "@vorzelajs/dom"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "hooks",
+    "icons",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "components/ui/time-picker.tsx",
+      "content": "import { accessorOf } from '~/hooks/index.ts'\nimport { Clock } from './icons.tsx'\nimport { Input } from './input.tsx'\n\nexport interface TimePickerProps {\n  label?: string\n  value?: string | (() => string)\n  defaultValue?: string\n  onChange?: (value: string) => void\n  hint?: string\n  min?: string\n  max?: string\n  step?: number\n  disabled?: boolean\n  required?: boolean\n  className?: string\n  id?: string\n}\n\n/** Native time field with a clock adornment and ISO 24-hour value. */\nexport function TimePicker({\n  label,\n  value: valueProp,\n  defaultValue,\n  onChange,\n  hint,\n  min,\n  max,\n  step = 900,\n  disabled,\n  required,\n  className,\n  id,\n}: TimePickerProps) {\n  const value =\n    valueProp === undefined ? defaultValue : accessorOf<string>(valueProp)\n\n  return (\n    <Input\n      id={id}\n      type=\"time\"\n      label={label}\n      hint={hint}\n      // InputProps types `value` as a plain string; the DOM binding accepts an\n      // accessor so a controlled time stays reactive.\n      value={value as unknown as string | undefined}\n      min={min}\n      max={max}\n      step={step}\n      disabled={disabled}\n      required={required}\n      className={className}\n      leading={<Clock aria-hidden />}\n      onChange={(event: globalThis.Event) =>\n        onChange?.((event.currentTarget as HTMLInputElement).value)\n      }\n    />\n  )\n}\n"
+    }
+  ],
+  "description": "time-picker component",
+  "alias": false
+}

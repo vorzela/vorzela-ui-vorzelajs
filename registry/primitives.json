@@ -1,0 +1,44 @@
+{
+  "name": "primitives",
+  "type": "primitive",
+  "version": "0.1.0",
+  "dependencies": [
+    "@vorzelajs/core",
+    "@vorzelajs/dom"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "hooks",
+    "lib-cx",
+    "lib-types",
+    "styles"
+  ],
+  "files": [
+    {
+      "path": "components/primitives/dismissable-layer.tsx",
+      "content": "import { effect, onCleanup, signal } from '@vorzelajs/core'\nimport { accessorOf } from '~/hooks/index.ts'\nimport type { ReactNode } from '~/lib/types.ts'\nimport styles from './primitives.module.scss'\n\nexport interface DismissableLayerProps {\n  children?: ReactNode\n  onDismiss: () => void\n  enabled?: boolean | (() => boolean)\n}\n\n/** Calls `onDismiss` on Escape or an outside pointer press. */\nexport function DismissableLayer({\n  children,\n  onDismiss,\n  enabled = true,\n}: DismissableLayerProps) {\n  const [node, setNode] = signal<HTMLDivElement | null>(null)\n  const isEnabled = accessorOf(enabled)\n\n  effect(() => {\n    if (!isEnabled()) return\n\n    const onKeyDown = (event: KeyboardEvent): void => {\n      if (event.key !== 'Escape' || event.defaultPrevented) return\n      event.preventDefault()\n      onDismiss()\n    }\n    const onPointerDown = (event: PointerEvent): void => {\n      const root = node()\n      if (!root || root.contains(event.target as Node)) return\n      onDismiss()\n    }\n\n    document.addEventListener('keydown', onKeyDown)\n    document.addEventListener('pointerdown', onPointerDown, true)\n    onCleanup(() => {\n      document.removeEventListener('keydown', onKeyDown)\n      document.removeEventListener('pointerdown', onPointerDown, true)\n    })\n  })\n\n  return (\n    <div ref={(element) => setNode(element as HTMLDivElement)} className={styles.layer}>\n      {children}\n    </div>\n  )\n}\n"
+    },
+    {
+      "path": "components/primitives/focus-trap.tsx",
+      "content": "import { effect, onCleanup, signal } from '@vorzelajs/core'\nimport { accessorOf } from '~/hooks/index.ts'\nimport { cx } from '~/lib/cx.ts'\nimport type { ReactNode } from '~/lib/types.ts'\nimport styles from './primitives.module.scss'\n\nconst FOCUSABLE = [\n  'a[href]',\n  'button:not([disabled])',\n  'input:not([disabled])',\n  'select:not([disabled])',\n  'textarea:not([disabled])',\n  '[tabindex]:not([tabindex=\"-1\"])',\n  '[contenteditable=\"true\"]',\n].join(',')\n\nexport interface FocusTrapProps {\n  children?: ReactNode\n  class?: string\n  className?: string\n  active?: boolean | (() => boolean)\n  restoreFocus?: boolean\n}\n\n/** Traps Tab focus and restores focus when the branch is disposed. */\nexport function FocusTrap({\n  children,\n  className,\n  active = true,\n  restoreFocus = true,\n}: FocusTrapProps) {\n  const [node, setNode] = signal<HTMLDivElement | null>(null)\n  const isActive = accessorOf(active)\n\n  effect(() => {\n    const root = node()\n    if (!root || !isActive()) return\n\n    const previous = document.activeElement as HTMLElement | null\n    const items = root.querySelectorAll<HTMLElement>(FOCUSABLE)\n    ;(items[0] ?? root).focus()\n\n    const onKeyDown = (event: KeyboardEvent): void => {\n      if (event.key !== 'Tab') return\n      const focusable = Array.from(root.querySelectorAll<HTMLElement>(FOCUSABLE))\n      if (focusable.length === 0) {\n        event.preventDefault()\n        return\n      }\n      const first = focusable[0] as HTMLElement\n      const last = focusable[focusable.length - 1] as HTMLElement\n      if (event.shiftKey && document.activeElement === first) {\n        event.preventDefault()\n        last.focus()\n      } else if (!event.shiftKey && document.activeElement === last) {\n        event.preventDefault()\n        first.focus()\n      }\n    }\n\n    root.addEventListener('keydown', onKeyDown)\n    onCleanup(() => {\n      root.removeEventListener('keydown', onKeyDown)\n      if (restoreFocus) previous?.focus()\n    })\n  })\n\n  return (\n    <div\n      ref={(element) => setNode(element as HTMLDivElement)}\n      className={cx(styles.trap, className)}\n      tabIndex={-1}\n    >\n      {children}\n    </div>\n  )\n}\n"
+    },
+    {
+      "path": "components/primitives/index.ts",
+      "content": "// Native primitives.\n\nexport * from './dismissable-layer.tsx'\nexport * from './focus-trap.tsx'\nexport * from './portal.tsx'\nexport * from './visually-hidden.tsx'"
+    },
+    {
+      "path": "components/primitives/portal.tsx",
+      "content": "export { Portal } from '@vorzelajs/dom'\nexport type { PortalProps } from '@vorzelajs/dom'\n"
+    },
+    {
+      "path": "components/primitives/primitives.module.scss",
+      "content": "@use 'styles' as vz;\n\n.layer {\n  display: contents;\n}\n\n.trap {\n  outline: none;\n}\n\n.fade {\n  animation: vz-fade-in var(--vz-fade-duration, 240ms) vz.ease('out')\n    var(--vz-fade-delay, 0ms) both;\n}\n\n.fade-reduced {\n  animation: none;\n}\n\n.skip {\n  position: fixed;\n  top: vz.space(4);\n  left: vz.space(4);\n  z-index: vz.z('toast');\n  padding: vz.space(2) vz.space(4);\n  border: 1px solid vz.color('border');\n  border-radius: vz.radius('md');\n  background: vz.color('primary');\n  color: vz.color('primary-foreground');\n  font-size: vz.font-size('sm');\n  font-weight: 600;\n  text-decoration: none;\n  box-shadow: vz.elevation(2);\n  transform: translateY(-200%);\n\n  &:focus-visible {\n    transform: none;\n    outline: 2px solid vz.color('ring', 0.6);\n    outline-offset: 2px;\n  }\n}\n\n.sr {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip-path: inset(50%);\n  white-space: nowrap;\n  border-width: 0;\n}\n\n.error {\n  padding: vz.space(4);\n  border: 1px solid vz.color('destructive', 0.3);\n  border-radius: vz.radius('lg');\n  background: vz.color('destructive', 0.06);\n  color: vz.color('destructive');\n  font-size: vz.font-size('sm');\n  line-height: 1.5;\n}\n\n@keyframes vz-fade-in {\n  from {\n    opacity: 0;\n    transform: translateY(6px);\n  }\n\n  to {\n    opacity: 1;\n    transform: none;\n  }\n}\n"
+    },
+    {
+      "path": "components/primitives/visually-hidden.tsx",
+      "content": "import { cx } from '~/lib/cx.ts'\nimport type { HTMLAttributes } from '~/lib/types.ts'\nimport styles from './primitives.module.scss'\n\n/** Screen-reader-only content. */\nexport function VisuallyHidden({\n  className,\n  ...props\n}: HTMLAttributes<HTMLSpanElement>) {\n  return <span className={cx(styles.sr, className)} {...props} />\n}\n"
+    }
+  ],
+  "description": "primitives component",
+  "alias": false
+}
