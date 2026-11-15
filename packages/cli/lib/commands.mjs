@@ -119,9 +119,14 @@ async function addItemFiles(item, config, manifest, cwd, flags) {
 }
 
 export async function init(cwd, flags = {}) {
-  const config = flags.registry
-    ? { ...DEFAULT_CONFIG, registry: flags.registry }
-    : DEFAULT_CONFIG
+  const existing = readConfig(cwd)
+  const config = {
+    ...DEFAULT_CONFIG,
+    ...existing,
+    aliases: { ...DEFAULT_CONFIG.aliases, ...existing?.aliases },
+    paths: { ...DEFAULT_CONFIG.paths, ...existing?.paths },
+    ...(flags.registry ? { registry: flags.registry } : {}),
+  }
   writeConfig(cwd, config)
   for (const dir of Object.values(config.paths)) {
     fs.mkdirSync(path.join(cwd, dir), { recursive: true })

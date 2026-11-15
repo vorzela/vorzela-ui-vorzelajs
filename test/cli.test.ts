@@ -45,6 +45,21 @@ describe('vorzelajs-ui CLI', () => {
     expect(fs.existsSync(path.join(cwd, 'src/styles'))).toBe(true)
   })
 
+  it('preserves custom paths when init runs again', () => {
+    const cwd = project()
+    run(cwd, 'init')
+    const file = path.join(cwd, 'vorzelajs.ui.json')
+    const config = JSON.parse(fs.readFileSync(file, 'utf8'))
+    config.paths.components = 'app/ui'
+    config.aliases.components = '~/ui'
+    fs.writeFileSync(file, JSON.stringify(config, null, 2))
+
+    run(cwd, 'init')
+    const next = JSON.parse(fs.readFileSync(file, 'utf8'))
+    expect(next.paths.components).toBe('app/ui')
+    expect(next.aliases.components).toBe('~/ui')
+  })
+
   it('adds components, rewrites aliases and installs table dependencies', () => {
     const cwd = project()
     run(cwd, 'init')
