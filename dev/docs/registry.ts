@@ -677,11 +677,11 @@ finishNetworkLoader()
   {
     slug: 'icons',
     name: 'Icons',
-    imports: 'Icon, Sparkles, CircleCheck',
+    imports: 'Sparkles, CircleCheck, ShieldCheck',
     description: 'Tree-shakeable icon components sized by `1em` and coloured by `currentColor`.',
     snippet: `<Sparkles aria-hidden />
 <CircleCheck aria-hidden />
-<Icon name="search" />`,
+<ShieldCheck size={24} aria-hidden />`,
   },
 ]
 
@@ -943,8 +943,11 @@ const dataDisplay: Entry[] = [
     isNew: true,
     imports: 'Icon, createIcon',
     description: 'The base SVG icon and a factory for your own icon sets.',
-    snippet: `<Icon name="search" />
-const Logo = createIcon('Logo', <path d="…" />)`,
+    snippet: `<Icon node={[['path', { d: 'M12 2 2 22h20L12 2Z' }]]} />
+
+const Triangle = createIcon([
+  ['path', { d: 'M12 2 2 22h20L12 2Z' }],
+])`,
   },
   {
     slug: 'lightbox',

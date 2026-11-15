@@ -2,6 +2,7 @@ import { signal } from '@vorzelajs/core'
 import { For, Show } from '@vorzelajs/dom'
 import { Avatar, AvatarFallback, AvatarImage, initials } from '~/components/ui/avatar.tsx'
 import { Badge } from '~/components/ui/badge.tsx'
+import { Icon, createIcon } from '~/components/ui/icon.tsx'
 import { Blockquote } from '~/components/ui/blockquote.tsx'
 import { Button } from '~/components/ui/button.tsx'
 import { Chat } from '~/components/ui/chat.tsx'
@@ -583,9 +584,16 @@ function VirtualListPreview() {
   )
 }
 
+const Triangle = createIcon([
+  ['path', { d: 'M12 2 2 22h20L12 2Z' }],
+  ['circle', { cx: 12, cy: 17, r: 1 }],
+])
+
 function IconPreview() {
   return (
     <div class={styles.demoRow}>
+      <Icon node={[['path', { d: 'M12 2 2 22h20L12 2Z' }]]} size={24} aria-hidden />
+      <Triangle size={24} aria-hidden />
       <Star size={24} aria-hidden />
       <Sparkles size={24} aria-hidden />
       <Zap size={24} aria-hidden />

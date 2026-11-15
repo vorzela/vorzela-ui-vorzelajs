@@ -142,8 +142,8 @@ What the app contains:
 
 - `#/` — overview, counts, and a quick-start snippet.
 - `#/components` — searchable index of every component, grouped by category.
-- `#/components/<slug>` — live preview, import path, copyable source and the
-  public prop table for one component.
+- `#/components/<slug>` — live preview, import path, theme-aware highlighted
+  source and the public prop table for one component.
 - `#/gallery` — every preview mounted at once, filterable by group.
 
 The preview lives in `dev/`; it imports components through the same `~`
