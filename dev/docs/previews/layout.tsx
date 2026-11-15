@@ -2,6 +2,8 @@ import { signal } from '@vorzelajs/core'
 import { AppShell } from '~/components/ui/app-shell.tsx'
 import { Badge } from '~/components/ui/badge.tsx'
 import { Button } from '~/components/ui/button.tsx'
+import { Footer } from '~/components/ui/footer.tsx'
+import { HeaderPreview, SidebarPreview, TopbarPreview } from './navigation.tsx'
 import {
   Collapsible,
   CollapsibleContent,
@@ -101,6 +103,21 @@ function CollapsiblePreview() {
   )
 }
 
+function FooterPreview() {
+  return (
+    <Footer
+      brand="Vorzela"
+      description="Source-owned components for VorzelaJS and SCSS Modules."
+      links={[
+        { label: 'Documentation', href: '#/components' },
+        { label: 'Gallery', href: '#/gallery' },
+        { label: 'Theming', href: '#/components/styles' },
+      ]}
+      note="© 2026 Vorzela · MIT licensed"
+    />
+  )
+}
+
 function SizeContextPreview() {
   const [size, setSize] = signal<'sm' | 'md' | 'lg'>('md')
   return (
@@ -178,6 +195,10 @@ function AppShellPreview() {
 }
 
 export const layoutPreviews = {
+  sidebar: SidebarPreview,
+  header: HeaderPreview,
+  footer: FooterPreview,
+  topbar: TopbarPreview,
   'app-shell': AppShellPreview,
   layout: LayoutPreview,
   collapsible: CollapsiblePreview,

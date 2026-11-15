@@ -1071,6 +1071,62 @@ const surfaces: Entry[] = [
 
 const layout: Entry[] = [
   {
+    slug: 'sidebar',
+    name: 'Sidebar',
+    imports: 'Sidebar',
+    description: 'The collapsible navigation rail with groups, nesting and a mobile drawer.',
+    snippet: `<Sidebar
+  groups={groups}
+  brand="Vorzela"
+  currentPath={path}
+  defaultCollapsed={false}
+/>`,
+    props: [
+      { name: 'groups', type: 'SidebarNavGroup[]', description: 'Grouped items; items may nest children.' },
+      { name: 'contained', type: 'boolean', defaultValue: 'false', description: 'Renders in-flow instead of fixed to the viewport.' },
+      { name: 'currentPath', type: 'string | Accessor<string>', description: 'Marks the active route.' },
+      { name: 'mobileOpen', type: 'boolean | Accessor<boolean>', description: 'Controls the drawer on small screens.' },
+    ],
+  },
+  {
+    slug: 'header',
+    name: 'Header',
+    imports: 'Header',
+    description: 'A page heading row with menu button, description and actions.',
+    snippet: `<Header
+  title="Components"
+  description="140 primitives"
+  onMenuClick={openNav}
+  actions={<Button size="sm">New</Button>}
+/>`,
+  },
+  {
+    slug: 'footer',
+    name: 'Footer',
+    imports: 'Footer',
+    description: 'A page footer with brand copy, links and a meta note.',
+    snippet: `<Footer
+  brand="Vorzela"
+  description="Source-owned components"
+  links={links}
+  note="© 2026 Vorzela"
+/>`,
+    props: [
+      { name: 'brand', type: 'ReactNode', defaultValue: 'Vorzela UI', description: 'Footer name or logo.' },
+      { name: 'description', type: 'ReactNode', description: 'Short line under the brand.' },
+      { name: 'links', type: 'FooterLink[]', description: 'Navigation links; `{ label, href }`.' },
+      { name: 'note', type: 'ReactNode', description: 'Meta line such as copyright.' },
+      { name: 'contained', type: 'boolean', defaultValue: 'true', description: 'Centres content at the page width.' },
+    ],
+  },
+  {
+    slug: 'topbar',
+    name: 'Topbar',
+    imports: 'Topbar',
+    description: 'A compact sticky bar with a menu button and action slot.',
+    snippet: `<Topbar title="Overview" onMenuClick={openNav} actions={<Badge>Live</Badge>} />`,
+  },
+  {
     slug: 'layout',
     name: 'Layout primitives',
     imports: 'Stack, Inline, Grid, Flex, Split, Container, PageSection',
@@ -1180,24 +1236,6 @@ const navigation: Entry[] = [
     snippet: `<Outline items={headings} activeId={active} />`,
   },
   {
-    slug: 'sidebar',
-    name: 'Sidebar',
-    imports: 'Sidebar',
-    description: 'The collapsible navigation rail with groups, nesting and a mobile drawer.',
-    snippet: `<Sidebar
-  groups={groups}
-  brand="Vorzela"
-  currentPath={path}
-  defaultCollapsed={false}
-/>`,
-    props: [
-      { name: 'groups', type: 'SidebarNavGroup[]', description: 'Grouped items; items may nest children.' },
-      { name: 'contained', type: 'boolean', defaultValue: 'false', description: 'Renders in-flow instead of fixed to the viewport.' },
-      { name: 'currentPath', type: 'string | Accessor<string>', description: 'Marks the active route.' },
-      { name: 'mobileOpen', type: 'boolean | Accessor<boolean>', description: 'Controls the drawer on small screens.' },
-    ],
-  },
-  {
     slug: 'stepper',
     name: 'Stepper',
     imports: 'Stepper',
@@ -1226,25 +1264,6 @@ const navigation: Entry[] = [
     </>
   )}
 </Tabs>`,
-  },
-  {
-    slug: 'header',
-    name: 'Header',
-    imports: 'Header',
-    description: 'A page heading row with menu button, description and actions.',
-    snippet: `<Header
-  title="Components"
-  description="140 primitives"
-  onMenuClick={openNav}
-  actions={<Button size="sm">New</Button>}
-/>`,
-  },
-  {
-    slug: 'topbar',
-    name: 'Topbar',
-    imports: 'Topbar',
-    description: 'A compact sticky bar with a menu button and action slot.',
-    snippet: `<Topbar title="Overview" onMenuClick={openNav} actions={<Badge>Live</Badge>} />`,
   },
 ]
 

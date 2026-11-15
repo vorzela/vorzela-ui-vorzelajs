@@ -385,15 +385,12 @@ function OutlinePreview() {
   )
 }
 
-function SidebarPreview() {
-  const [path, setPath] = signal('/projects/overview')
+export function SidebarPreview() {
   return (
     <div
       style={{
-        height: '22rem',
+        height: '30rem',
         overflow: 'hidden',
-        border: '1px solid var(--border)',
-        'border-radius': 'var(--radius-lg)',
       }}
       onClick={(event) => {
         if ((event.target as Element).closest('a')) event.preventDefault()
@@ -405,37 +402,41 @@ function SidebarPreview() {
         brandMark="V"
         subtitle="Workspace"
         version="0.2.0"
-        currentPath={path}
+        currentPath="#/layout"
         groups={[
           {
             group: 'Workspace',
+            collapsible: true,
             items: [
-              { label: 'Overview', href: '/projects/overview', icon: <Home aria-hidden /> },
-              { label: 'Members', href: '/projects/members', icon: <Users aria-hidden /> },
+              { label: 'Overview', href: '#/overview', icon: <Home aria-hidden /> },
               {
-                label: 'Settings',
-                icon: <Settings aria-hidden />,
+                label: 'Projects',
+                icon: <FolderOpen aria-hidden />,
                 children: [
-                  { label: 'General', href: '/projects/settings/general' },
-                  { label: 'Billing', href: '/projects/settings/billing' },
+                  { label: 'All projects', href: '#/layout' },
+                  { label: 'Archived', href: '#/layout/archived' },
                 ],
               },
+              { label: 'Members', href: '#/layout/members', icon: <Users aria-hidden /> },
             ],
           },
           {
             group: 'Insights',
-            items: [{ label: 'Charts', href: '/projects/charts', icon: <BarChart3 aria-hidden /> }],
+            collapsible: true,
+            items: [
+              { label: 'Activity', href: '#/layout/activity', icon: <BarChart3 aria-hidden /> },
+              { label: 'Reports', href: '#/layout/reports', icon: <BarChart3 aria-hidden /> },
+            ],
+          },
+          {
+            group: 'Settings',
+            collapsible: true,
+            defaultOpen: false,
+            items: [
+              { label: 'Preferences', href: '#/layout/settings', icon: <Settings aria-hidden /> },
+            ],
           },
         ]}
-        footer={
-          <Button
-            size="sm"
-            variant="outline"
-            onClick={() => setPath((current) => (current.endsWith('members') ? '/projects/overview' : '/projects/members'))}
-          >
-            Toggle active route
-          </Button>
-        }
       />
     </div>
   )
@@ -548,7 +549,7 @@ function ToolbarPreview() {
   )
 }
 
-function HeaderPreview() {
+export function HeaderPreview() {
   return (
     <div style={{ border: '1px solid var(--border)', 'border-radius': 'var(--radius-lg)', overflow: 'hidden' }}>
       <Header
@@ -570,7 +571,7 @@ function HeaderPreview() {
   )
 }
 
-function TopbarPreview() {
+export function TopbarPreview() {
   return (
     <div style={{ border: '1px solid var(--border)', 'border-radius': 'var(--radius-lg)', overflow: 'hidden' }}>
       <Topbar
@@ -598,11 +599,8 @@ export const navigationPreviews = {
   'nav-icon': NavIconPreview,
   'navigation-menu': NavigationMenuPreview,
   outline: OutlinePreview,
-  sidebar: SidebarPreview,
   stepper: StepperPreview,
   'tab-bar': TabBarPreview,
   tabs: TabsPreview,
   toolbar: ToolbarPreview,
-  header: HeaderPreview,
-  topbar: TopbarPreview,
 } satisfies Record<string, () => unknown>

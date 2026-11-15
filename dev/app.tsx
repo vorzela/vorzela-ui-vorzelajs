@@ -25,7 +25,7 @@ import { CodeBlock, Demo, PropsTable, Section } from './docs/showcase.tsx'
 import { navigate, useRoute, useTheme } from './docs/hooks.ts'
 import styles from './docs/docs.module.scss'
 
-const version = '0.2.0'
+const version = '0.3.0'
 
 const quickStart = `import { signal } from '@vorzelajs/core'
 import { render } from '@vorzelajs/dom'
