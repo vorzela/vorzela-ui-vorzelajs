@@ -3,9 +3,9 @@
   "type": "chart",
   "version": "0.1.0",
   "dependencies": [
-    "@vorzelajs/core",
-    "@vorzelajs/dom",
-    "d3"
+    "@vorzelajs/core@0.0.21",
+    "@vorzelajs/dom@0.0.21",
+    "d3@^7.9.2"
   ],
   "devDependencies": [],
   "registryDependencies": [

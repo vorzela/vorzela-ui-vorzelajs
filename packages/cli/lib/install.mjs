@@ -21,13 +21,22 @@ export function readPackageJson(cwd) {
   return fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {}
 }
 
+function packageName(specifier) {
+  if (specifier.startsWith('@')) {
+    return specifier.split('/').slice(0, 2).join('/')
+  }
+  return specifier.split('@')[0]
+}
+
 export function missingDependencies(cwd, dependencies) {
   const pkg = readPackageJson(cwd)
   const present = new Set([
     ...Object.keys(pkg.dependencies ?? {}),
     ...Object.keys(pkg.devDependencies ?? {}),
   ])
-  return [...new Set(dependencies)].filter((dep) => !present.has(dep))
+  return [...new Set(dependencies)].filter(
+    (dep) => !present.has(packageName(dep)),
+  )
 }
 
 export function installDependencies(cwd, dependencies, { dev = false } = {}) {

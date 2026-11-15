@@ -3,12 +3,12 @@
   "type": "chart",
   "version": "0.1.0",
   "dependencies": [
-    "@vorzelajs/core",
-    "@vorzelajs/dom",
-    "d3-sankey"
+    "@vorzelajs/core@0.0.21",
+    "@vorzelajs/dom@0.0.21",
+    "d3-sankey@^0.12.3"
   ],
   "devDependencies": [
-    "@types/d3-sankey"
+    "@types/d3-sankey@^0.12.5"
   ],
   "registryDependencies": [
     "chart-shared"

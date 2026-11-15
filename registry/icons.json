@@ -3,9 +3,9 @@
   "type": "ui",
   "version": "0.1.0",
   "dependencies": [
-    "@vorzelajs/core",
-    "@vorzelajs/dom",
-    "lucide"
+    "@vorzelajs/core@0.0.21",
+    "@vorzelajs/dom@0.0.21",
+    "lucide@^1.72.0"
   ],
   "devDependencies": [],
   "registryDependencies": [

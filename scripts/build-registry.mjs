@@ -15,9 +15,13 @@ import { fileURLToPath } from 'node:url'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const registryDir = path.join(root, 'registry')
-const version = JSON.parse(
-  fs.readFileSync(path.join(root, 'package.json'), 'utf8'),
-).version
+const pkg = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'))
+const version = pkg.version
+
+function specFor(name) {
+  const range = pkg.dependencies?.[name] ?? pkg.devDependencies?.[name]
+  return range ? `${name}@${range}` : name
+}
 
 fs.rmSync(registryDir, { recursive: true, force: true })
 fs.mkdirSync(registryDir, { recursive: true })
@@ -88,7 +92,7 @@ defineItem(
       source,
       output: path.posix.join('styles', path.posix.relative('src/styles', source)),
     })),
-  { devDependencies: ['sass-embedded'] },
+  { devDependencies: [specFor('sass-embedded')] },
 )
 
 collect('src/hooks', 'hooks', 'hook', 'hooks', ['.ts'])
@@ -329,7 +333,7 @@ for (const item of definitions) {
         pkg === 'lucide' ||
         pkg === 'dompurify'
       ) {
-        item.dependencies.add(pkg)
+        item.dependencies.add(specFor(pkg))
       }
     }
 
@@ -349,17 +353,17 @@ for (const item of definitions) {
   if (['ui', 'chart', 'primitive', 'hook'].includes(item.type)) {
     // The JSX transform imports @vorzelajs/dom/jsx-runtime even when the
     // component source has no explicit runtime import.
-    item.dependencies.add('@vorzelajs/core')
-    item.dependencies.add('@vorzelajs/dom')
+    item.dependencies.add(specFor('@vorzelajs/core'))
+    item.dependencies.add(specFor('@vorzelajs/dom'))
   }
   if (item.name === 'data-table' || item.name === 'simple-data-table') {
-    item.dependencies.add('@vorzelajs/table')
+    item.dependencies.add(specFor('@vorzelajs/table'))
   }
   if (item.name === 'chart-shared') {
-    item.devDependencies.add('@types/d3')
+    item.devDependencies.add(specFor('@types/d3'))
   }
   if (item.name === 'sankey-chart') {
-    item.devDependencies.add('@types/d3-sankey')
+    item.devDependencies.add(specFor('@types/d3-sankey'))
   }
   item.registryDependencies.delete(item.name)
 }

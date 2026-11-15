@@ -113,13 +113,17 @@ describe('registry table contract', () => {
     for (const name of ['data-table', 'simple-data-table']) {
       const item = byName.get(name)
       if (!item) throw new Error(`Missing registry item: ${name}`)
-      expect(item.dependencies).toContain('@vorzelajs/table')
+      expect(
+        item.dependencies.some((dep) => dep.startsWith('@vorzelajs/table@')),
+      ).toBe(true)
       expect(item.registryDependencies).toContain('lib-table')
     }
 
     const libTable = byName.get('lib-table')
     if (!libTable) throw new Error('Missing registry item: lib-table')
-    expect(libTable.dependencies).toContain('@vorzelajs/table')
+    expect(
+      libTable.dependencies.some((dep) => dep.startsWith('@vorzelajs/table@')),
+    ).toBe(true)
   })
 
   it('has no missing registry dependencies or duplicate output paths', () => {
