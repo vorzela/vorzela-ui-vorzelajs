@@ -38,7 +38,7 @@ The CLI reads `vorzelajs.ui.json` from the current directory:
 ```json
 {
   "registry": "https://raw.githubusercontent.com/vorzela/vorzela-ui-vorzelajs/main/registry",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "aliases": {
     "base": "~",
     "components": "~/components/ui",
@@ -99,13 +99,45 @@ is passed. `--no-install` skips the package manager, and `--dry-run` prints the
 planned writes. Component names accept kebab-case, PascalCase and scoped names:
 `DataTable`, `data-table` and `@vorzelajs/data-table` are equivalent.
 
+## Installed layout and custom styles
+
+Component code is written to `src/components/ui`, but stylesheets go into the
+configured styles folder:
+
+```text
+src/
+├── components/ui/data-table.tsx
+└── styles/
+    ├── components/ui/data-table.module.scss
+    ├── components/primitives/primitives.module.scss
+    ├── charts/charts.module.scss
+    ├── custom/_index.scss       # your overrides and new styles
+    ├── custom/README.md
+    ├── tokens/                 # colour, space, type, radius, shadow, motion, z
+    ├── mixins/                 # the vz.* Sass API
+    ├── _index.scss
+    └── global.scss
+```
+
+Generated styles start with a `@generated` header and are replaced by
+`vorzelajs-ui update`. Do not edit them. Put overrides and your own styles in
+`styles/custom`; `global.scss` imports `custom/_index.scss` automatically.
+
+`init` also merges `.vscode/settings.json` SCSS associations and writes
+`.vscode/scss.code-snippets`. Type `vz-scss` in a new file to insert the token,
+responsive, mixin and `sass:math` reference header. Pass `--no-vscode` to skip
+both files.
+
+DataTable and SimpleDataTable still use the same `@vorzelajs/table` features and
+row pipeline; moving the stylesheets does not change their runtime cost.
+
 ## Repository layout
 
 ```text
-src/styles/                 tokens, mixins, reset, global entry
+src/styles/                 tokens, mixins, custom layer, global entry
 src/lib/                    cx, table features, overlay helpers, URL safety, refs
 src/hooks/                  signal/effect hooks
-src/components/ui/          130 components and SCSS modules
+src/components/ui/          130 components (source keeps SCSS beside them)
 src/components/primitives/  portal, focus trap, dismissable layer
 src/charts/                 d3 charts
 registry/                   generated shadcn-style registry

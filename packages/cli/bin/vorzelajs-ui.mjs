@@ -23,6 +23,7 @@ function parseArgs(argv) {
     else if (arg === '--dry-run' || arg === '-n') flags.dryRun = true
     else if (arg === '--overwrite') flags.overwrite = true
     else if (arg === '--no-install') flags.noInstall = true
+    else if (arg === '--no-vscode') flags.noVscode = true
     else if (arg === '--registry') {
       flags.registry = argv[index + 1]
       index += 1
@@ -86,6 +87,7 @@ Flags:
   --dry-run               Show changes without writing
   --overwrite             Replace existing files on add
   --no-install            Do not run the package manager
+  --no-vscode             Skip .vscode settings and snippets
   --yes                   Accept safe updates only
   --force                 Replace modified files without asking
 `)
