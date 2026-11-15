@@ -61,6 +61,10 @@ The CLI reads `vorzelajs.ui.json` from the current directory:
 }
 ```
 
+The default registry URL assumes this repository is published at
+`github.com/vorzela/vorzela-ui-vorzelajs`. Until that remote exists, pass
+`--registry <path-or-url>` or set `registry` in `vorzelajs.ui.json`.
+
 The default `~/*` alias must resolve to `src/*` in your TypeScript and Vite
 configuration. Import the generated stylesheet once at the app root:
 
