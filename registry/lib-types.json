@@ -1,7 +1,7 @@
 {
   "name": "lib-types",
   "type": "lib",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "dependencies": [
     "@vorzelajs/dom@0.0.21"
   ],

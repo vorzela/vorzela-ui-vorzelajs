@@ -402,6 +402,7 @@ function SidebarPreview() {
       <Sidebar
         contained
         brand="Vorzela"
+        brandMark="V"
         subtitle="Workspace"
         version="0.2.0"
         currentPath={path}

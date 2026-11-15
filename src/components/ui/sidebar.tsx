@@ -192,11 +192,8 @@ export function Sidebar({
     (groupHasActiveItem(group) ? true : (group.defaultOpen ?? true))
 
   const toggleCollapsed = (): void => {
-    if (isDesktop()) {
-      setCollapsedDesktop((value) => !value)
-      return
-    }
-    setCollapsedMobile((value) => !value)
+    if (!isDesktop()) return
+    setCollapsedDesktop((value) => !value)
   }
 
   const handleParent = (item: SidebarNavItem): void => {
@@ -239,19 +236,17 @@ export function Sidebar({
         aria-label="Main navigation"
       >
         <div className={styles.header}>
+          {brandMark ? (
+            <span className={styles.brandMark}>{brandMark}</span>
+          ) : null}
           <Show when={() => !collapsed()}>
             {() => (
-              <>
-                {brandMark ? (
-                  <span className={styles.brandMark}>{brandMark}</span>
+              <div className={styles.brand}>
+                <span className={styles.brandName}>{brand}</span>
+                {subtitle ? (
+                  <p className={styles.brandSubtitle}>{subtitle}</p>
                 ) : null}
-                <div className={styles.brand}>
-                  <span className={styles.brandName}>{brand}</span>
-                  {subtitle ? (
-                    <p className={styles.brandSubtitle}>{subtitle}</p>
-                  ) : null}
-                </div>
-              </>
+              </div>
             )}
           </Show>
 
@@ -361,6 +356,9 @@ export function Sidebar({
                                 aria-label={reactive(() =>
                                   collapsed() ? item.label : undefined,
                                 )}
+                                title={reactive(() =>
+                                  collapsed() ? item.label : undefined,
+                                )}
                                 data-label={reactive(() =>
                                   collapsed() ? item.label : undefined,
                                 )}
@@ -399,6 +397,9 @@ export function Sidebar({
                                       : 'false',
                                 )}
                                 aria-label={reactive(() =>
+                                  collapsed() ? item.label : undefined,
+                                )}
+                                title={reactive(() =>
                                   collapsed() ? item.label : undefined,
                                 )}
                                 data-label={reactive(() =>
@@ -511,6 +512,12 @@ export function Sidebar({
             className={styles.collapse}
             onClick={toggleCollapsed}
             aria-label={reactive(() =>
+              collapsed() ? 'Expand sidebar' : 'Collapse sidebar',
+            )}
+            aria-expanded={reactive(() =>
+              collapsed() ? 'false' : 'true',
+            )}
+            title={reactive(() =>
               collapsed() ? 'Expand sidebar' : 'Collapse sidebar',
             )}
             data-label={reactive(() =>

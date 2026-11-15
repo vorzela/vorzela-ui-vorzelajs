@@ -25,7 +25,7 @@ import { CodeBlock, Demo, PropsTable, Section } from './docs/showcase.tsx'
 import { navigate, useRoute, useTheme } from './docs/hooks.ts'
 import styles from './docs/docs.module.scss'
 
-const version = '0.1.2'
+const version = '0.1.3'
 
 const quickStart = `import { signal } from '@vorzelajs/core'
 import { render } from '@vorzelajs/dom'
@@ -475,6 +475,7 @@ export function App() {
       <Sidebar
         groups={navGroups}
         brand="Vorzela UI"
+        brandMark="V"
         subtitle="Component preview"
         version={version}
         currentPath={() => `#/${route().path}`}

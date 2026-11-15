@@ -52,10 +52,6 @@
   @include vz.motion-reduce {
     scroll-behavior: auto;
   }
-
-  @media (min-width: 64rem) {
-    margin-left: var(--sidebar-width, 16rem);
-  }
 }
 
 .topbar {
