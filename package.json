@@ -1,6 +1,6 @@
 {
   "name": "vorzela-ui-vorzelajs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "description": "VorzelaJS UI components copied into your app, shadcn-style.",

@@ -38,7 +38,7 @@ The CLI reads `vorzelajs.ui.json` from the current directory:
 ```json
 {
   "registry": "https://raw.githubusercontent.com/vorzela/vorzela-ui-vorzelajs/main/registry",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "aliases": {
     "base": "~",
     "components": "~/components/ui",

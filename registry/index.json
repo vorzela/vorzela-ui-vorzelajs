@@ -1,10 +1,10 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "items": [
     {
       "name": "accordion",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -27,7 +27,7 @@
     {
       "name": "action-menu",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -50,7 +50,7 @@
     {
       "name": "alert",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -72,7 +72,7 @@
     {
       "name": "alert-dialog",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -97,7 +97,7 @@
     {
       "name": "anchor",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -118,7 +118,7 @@
     {
       "name": "app-shell",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -142,7 +142,7 @@
     {
       "name": "aspect-ratio",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -163,7 +163,7 @@
     {
       "name": "autocomplete",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -188,7 +188,7 @@
     {
       "name": "avatar",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -209,7 +209,7 @@
     {
       "name": "badge",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -230,7 +230,7 @@
     {
       "name": "banner",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -252,7 +252,7 @@
     {
       "name": "bar-chart",
       "type": "chart",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -271,7 +271,7 @@
     {
       "name": "bento-grid",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -292,7 +292,7 @@
     {
       "name": "blockquote",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -313,7 +313,7 @@
     {
       "name": "breadcrumb",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -335,7 +335,7 @@
     {
       "name": "bullet-chart",
       "type": "chart",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -354,7 +354,7 @@
     {
       "name": "button",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -375,7 +375,7 @@
     {
       "name": "button-group",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -396,7 +396,7 @@
     {
       "name": "calendar",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -419,7 +419,7 @@
     {
       "name": "calendar-utils",
       "type": "lib",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [],
       "devDependencies": [],
       "registryDependencies": [],
@@ -432,7 +432,7 @@
     {
       "name": "callout",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -454,7 +454,7 @@
     {
       "name": "candlestick-chart",
       "type": "chart",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -473,7 +473,7 @@
     {
       "name": "card",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -494,7 +494,7 @@
     {
       "name": "carousel",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -518,7 +518,7 @@
     {
       "name": "cascader",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -541,7 +541,7 @@
     {
       "name": "chart-shared",
       "type": "chart",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -572,7 +572,7 @@
     {
       "name": "charts",
       "type": "chart",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -606,7 +606,7 @@
     {
       "name": "chat",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -627,7 +627,7 @@
     {
       "name": "checkbox",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -650,7 +650,7 @@
     {
       "name": "citation",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -671,7 +671,7 @@
     {
       "name": "close-button",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -693,7 +693,7 @@
     {
       "name": "code-block",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -714,7 +714,7 @@
     {
       "name": "collapsible",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -737,7 +737,7 @@
     {
       "name": "color-picker",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -758,7 +758,7 @@
     {
       "name": "combobox",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -783,7 +783,7 @@
     {
       "name": "command",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -808,7 +808,7 @@
     {
       "name": "context-menu",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -831,7 +831,7 @@
     {
       "name": "cookie-consent",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -856,7 +856,7 @@
     {
       "name": "copy-button",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -880,7 +880,7 @@
     {
       "name": "currency-input",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -901,7 +901,7 @@
     {
       "name": "data-table",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -929,7 +929,7 @@
     {
       "name": "date-picker",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -956,7 +956,7 @@
     {
       "name": "description-list",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -977,7 +977,7 @@
     {
       "name": "diff-viewer",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -998,7 +998,7 @@
     {
       "name": "donut-chart",
       "type": "chart",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -1018,7 +1018,7 @@
     {
       "name": "drawer",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1043,7 +1043,7 @@
     {
       "name": "dropdown",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1066,7 +1066,7 @@
     {
       "name": "editable",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1088,7 +1088,7 @@
     {
       "name": "empty",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1110,7 +1110,7 @@
     {
       "name": "error-state",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1133,7 +1133,7 @@
     {
       "name": "field",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1155,7 +1155,7 @@
     {
       "name": "file-picker",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1180,7 +1180,7 @@
     {
       "name": "file-upload",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1198,7 +1198,7 @@
     {
       "name": "float-button",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1220,7 +1220,7 @@
     {
       "name": "floating-label-input",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1243,7 +1243,7 @@
     {
       "name": "funnel-chart",
       "type": "chart",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -1262,7 +1262,7 @@
     {
       "name": "gauge",
       "type": "chart",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -1283,7 +1283,7 @@
     {
       "name": "glass-panel",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1304,7 +1304,7 @@
     {
       "name": "header",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1326,7 +1326,7 @@
     {
       "name": "heatmap",
       "type": "chart",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -1345,7 +1345,7 @@
     {
       "name": "histogram-chart",
       "type": "chart",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -1365,7 +1365,7 @@
     {
       "name": "hooks",
       "type": "hook",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1392,7 +1392,7 @@
     {
       "name": "hover-card",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1415,7 +1415,7 @@
     {
       "name": "icon",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1436,7 +1436,7 @@
     {
       "name": "icons",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -1455,7 +1455,7 @@
     {
       "name": "image-cropper",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1480,7 +1480,7 @@
     {
       "name": "input",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1504,7 +1504,7 @@
     {
       "name": "input-group",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1526,7 +1526,7 @@
     {
       "name": "invoice",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1547,7 +1547,7 @@
     {
       "name": "json-viewer",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1568,7 +1568,7 @@
     {
       "name": "kbd",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1589,7 +1589,7 @@
     {
       "name": "label",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1611,7 +1611,7 @@
     {
       "name": "layer",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1632,7 +1632,7 @@
     {
       "name": "layout",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1653,7 +1653,7 @@
     {
       "name": "lib-cx",
       "type": "lib",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [],
       "devDependencies": [],
       "registryDependencies": [],
@@ -1666,7 +1666,7 @@
     {
       "name": "lib-overlay",
       "type": "lib",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [],
       "devDependencies": [],
       "registryDependencies": [],
@@ -1679,7 +1679,7 @@
     {
       "name": "lib-phone-countries",
       "type": "lib",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [],
       "devDependencies": [],
       "registryDependencies": [],
@@ -1692,7 +1692,7 @@
     {
       "name": "lib-refs",
       "type": "lib",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [],
       "devDependencies": [],
       "registryDependencies": [
@@ -1707,7 +1707,7 @@
     {
       "name": "lib-security",
       "type": "lib",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "dompurify@^3.4.17"
       ],
@@ -1722,7 +1722,7 @@
     {
       "name": "lib-table",
       "type": "lib",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/table@0.0.21"
       ],
@@ -1737,7 +1737,7 @@
     {
       "name": "lib-types",
       "type": "lib",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/dom@0.0.21"
       ],
@@ -1752,7 +1752,7 @@
     {
       "name": "lightbox",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1775,7 +1775,7 @@
     {
       "name": "line-chart",
       "type": "chart",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -1795,7 +1795,7 @@
     {
       "name": "link",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1818,7 +1818,7 @@
     {
       "name": "list",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1839,7 +1839,7 @@
     {
       "name": "markdown",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1860,7 +1860,7 @@
     {
       "name": "marquee",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1881,7 +1881,7 @@
     {
       "name": "masonry-grid",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1903,7 +1903,7 @@
     {
       "name": "mentions",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1924,7 +1924,7 @@
     {
       "name": "menubar",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1945,7 +1945,7 @@
     {
       "name": "modal",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1970,7 +1970,7 @@
     {
       "name": "native-select",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -1994,7 +1994,7 @@
     {
       "name": "nav-icon",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2015,7 +2015,7 @@
     {
       "name": "navigation-menu",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2038,7 +2038,7 @@
     {
       "name": "network-loader",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2062,7 +2062,7 @@
     {
       "name": "notification-center",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2087,7 +2087,7 @@
     {
       "name": "number-input",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2109,7 +2109,7 @@
     {
       "name": "number-ticker",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2130,7 +2130,7 @@
     {
       "name": "offline-banner",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2152,7 +2152,7 @@
     {
       "name": "optimized-image",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2176,7 +2176,7 @@
     {
       "name": "otp-input",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2197,7 +2197,7 @@
     {
       "name": "outline",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2217,7 +2217,7 @@
     {
       "name": "overlay",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2238,7 +2238,7 @@
     {
       "name": "pagination",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2262,7 +2262,7 @@
     {
       "name": "password-input",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2285,7 +2285,7 @@
     {
       "name": "phone-input",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2309,7 +2309,7 @@
     {
       "name": "popconfirm",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2331,7 +2331,7 @@
     {
       "name": "popover",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2355,7 +2355,7 @@
     {
       "name": "primitives",
       "type": "primitive",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2381,7 +2381,7 @@
     {
       "name": "progress",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2401,7 +2401,7 @@
     {
       "name": "qr-code",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2422,7 +2422,7 @@
     {
       "name": "radar-chart",
       "type": "chart",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -2441,7 +2441,7 @@
     {
       "name": "radial-bar-chart",
       "type": "chart",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -2461,7 +2461,7 @@
     {
       "name": "radio-group",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2482,7 +2482,7 @@
     {
       "name": "range-slider",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2503,7 +2503,7 @@
     {
       "name": "rating",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2525,7 +2525,7 @@
     {
       "name": "receipt",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2546,7 +2546,7 @@
     {
       "name": "resizable",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2568,7 +2568,7 @@
     {
       "name": "result",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2590,7 +2590,7 @@
     {
       "name": "sankey-chart",
       "type": "chart",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -2611,7 +2611,7 @@
     {
       "name": "scatter-chart",
       "type": "chart",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -2631,7 +2631,7 @@
     {
       "name": "scroll-area",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2652,7 +2652,7 @@
     {
       "name": "search-input",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2675,7 +2675,7 @@
     {
       "name": "segmented-control",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2697,7 +2697,7 @@
     {
       "name": "select",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2722,7 +2722,7 @@
     {
       "name": "separator",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2743,7 +2743,7 @@
     {
       "name": "sheet",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2768,7 +2768,7 @@
     {
       "name": "sidebar",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2792,7 +2792,7 @@
     {
       "name": "simple-data-table",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -2817,7 +2817,7 @@
     {
       "name": "size-context",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2835,7 +2835,7 @@
     {
       "name": "skeleton",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2856,7 +2856,7 @@
     {
       "name": "slider",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2877,7 +2877,7 @@
     {
       "name": "sonner",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2899,7 +2899,7 @@
     {
       "name": "sparkline",
       "type": "chart",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -2920,7 +2920,7 @@
     {
       "name": "spinner",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2941,7 +2941,7 @@
     {
       "name": "stat",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2963,7 +2963,7 @@
     {
       "name": "status-dot",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -2983,7 +2983,7 @@
     {
       "name": "stepper",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3004,7 +3004,7 @@
     {
       "name": "styles",
       "type": "style",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [],
       "devDependencies": [
         "sass-embedded@^1.107.1"
@@ -3039,7 +3039,7 @@
     {
       "name": "switch",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3061,7 +3061,7 @@
     {
       "name": "tab-bar",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3083,7 +3083,7 @@
     {
       "name": "table",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3104,7 +3104,7 @@
     {
       "name": "tabs",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3126,7 +3126,7 @@
     {
       "name": "tag-input",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3148,7 +3148,7 @@
     {
       "name": "textarea",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3172,7 +3172,7 @@
     {
       "name": "time-picker",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3192,7 +3192,7 @@
     {
       "name": "timeline",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3213,7 +3213,7 @@
     {
       "name": "toggle",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3235,7 +3235,7 @@
     {
       "name": "toggle-group",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3258,7 +3258,7 @@
     {
       "name": "toolbar",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3280,7 +3280,7 @@
     {
       "name": "tooltip",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3303,7 +3303,7 @@
     {
       "name": "topbar",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3322,7 +3322,7 @@
     {
       "name": "tour",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3346,7 +3346,7 @@
     {
       "name": "transfer",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3369,7 +3369,7 @@
     {
       "name": "tree-view",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3392,7 +3392,7 @@
     {
       "name": "treemap-chart",
       "type": "chart",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -3411,7 +3411,7 @@
     {
       "name": "typography",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3432,7 +3432,7 @@
     {
       "name": "virtual-list",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
@@ -3454,7 +3454,7 @@
     {
       "name": "waterfall-chart",
       "type": "chart",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21",
@@ -3473,7 +3473,7 @@
     {
       "name": "watermark",
       "type": "ui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": [
         "@vorzelajs/core@0.0.21",
         "@vorzelajs/dom@0.0.21"
