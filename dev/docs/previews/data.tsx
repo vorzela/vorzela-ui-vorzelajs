@@ -60,7 +60,7 @@ function AvatarPreview() {
       </Avatar>
       <Avatar size="lg" square presence="busy">
         <AvatarImage
-          src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Crect width='64' height='64' fill='%233b82f6'/%3E%3C/svg%3E"
+          src="/preview/avatar.svg"
           alt=""
         />
         <AvatarFallback>GH</AvatarFallback>
@@ -618,7 +618,7 @@ function LightboxPreview() {
         {() => (
           <Lightbox
             open={open}
-            src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='500'%3E%3Crect width='800' height='500' fill='%23111827'/%3E%3Ccircle cx='400' cy='250' r='140' fill='%233b82f6'/%3E%3C/svg%3E"
+            src="/preview/lightbox.svg"
             alt="Abstract blue circle on a dark background"
             caption="A zoomable image overlay"
             onClose={() => setOpen(false)}
