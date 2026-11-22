@@ -154,7 +154,7 @@ export function Popover({
       {() => (
         <div className={styles.wrapper}>
           {typeof children === 'function'
-            ? (children as () => unknown)()
+            ? (children as () => ReactNode)()
             : children}
         </div>
       )}

@@ -83,7 +83,7 @@ function pack(
   }
 }
 
-function childNodes(children: ReactNode): unknown[] {
+function childNodes(children: ReactNode): ReactNode[] {
   if (children == null) return []
   if (Array.isArray(children)) return children
   if (

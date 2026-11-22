@@ -124,7 +124,7 @@ export function Command({ className, children, ...props }: CommandProps) {
           {...props}
         >
           {typeof children === 'function'
-            ? (children as () => unknown)()
+            ? (children as () => ReactNode)()
             : children}
         </div>
       )}

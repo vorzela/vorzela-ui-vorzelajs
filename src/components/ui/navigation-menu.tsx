@@ -118,8 +118,9 @@ export function NavigationMenuList({
 }
 
 export interface NavigationMenuItemProps
-  extends HTMLAttributes<HTMLLIElement> {
+  extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
   value?: string
+  className?: string
   onMouseEnter?: (event: MouseEvent<HTMLLIElement>) => void
   onMouseLeave?: (event: MouseEvent<HTMLLIElement>) => void
   children?: ReactNode | ((value: string) => ReactNode)
@@ -143,12 +144,12 @@ export function NavigationMenuItem({
       ? (children as (value: string) => ReactNode)
       : null
 
-  const content = renderChildren ? (
+  const content: ReactNode = renderChildren ? (
     <NavigationMenuItemContext.Provider value={itemValue}>
       {() => renderChildren(itemValue)}
     </NavigationMenuItemContext.Provider>
   ) : (
-    children
+    (children as ReactNode)
   )
 
   return (

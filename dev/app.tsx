@@ -25,7 +25,7 @@ import { CodeBlock, Demo, PropsTable, Section } from './docs/showcase.tsx'
 import { navigate, useRoute, useTheme } from './docs/hooks.ts'
 import styles from './docs/docs.module.scss'
 
-const version = '0.3.0'
+const version = '0.3.1'
 
 const quickStart = `import { signal } from '@vorzelajs/core'
 import { render } from '@vorzelajs/dom'
@@ -113,32 +113,28 @@ function Overview() {
           <Button variant="outline" onClick={() => navigate('gallery')}>
             Open the gallery
           </Button>
-          <CopyButton value="npm run dev" label="Copy dev command" variant="ghost" />
+        </div>
+        <div class={styles.heroMeta}>
+          <span class={styles.metaItem}>
+            <span class={styles.metaValue}>{components.length}</span>
+            <span class={styles.metaLabel}>Components</span>
+          </span>
+          <span class={styles.metaItem}>
+            <span class={styles.metaValue}>{groupCounts.length}</span>
+            <span class={styles.metaLabel}>Groups</span>
+          </span>
+          <span class={styles.metaItem}>
+            <span class={styles.metaValue}>{componentsInGroup('Charts').length}</span>
+            <span class={styles.metaLabel}>Charts</span>
+          </span>
+          <span class={styles.metaItem}>
+            <span class={styles.metaValue}>{componentsInGroup('Forms').length}</span>
+            <span class={styles.metaLabel}>Form controls</span>
+          </span>
         </div>
       </section>
 
-      <Section title="At a glance" lead="The preview app imports components through the same ~ alias a consumer gets from vorzelajs-ui init.">
-        <div class={styles.statGrid}>
-          <div class={styles.componentCard}>
-            <p class={styles.statValue}>{components.length}</p>
-            <p class={styles.componentDesc}>Components with source modules</p>
-          </div>
-          <div class={styles.componentCard}>
-            <p class={styles.statValue}>{groupCounts.length}</p>
-            <p class={styles.componentDesc}>Groups, from actions to charts</p>
-          </div>
-          <div class={styles.componentCard}>
-            <p class={styles.statValue}>{componentsInGroup('Charts').length}</p>
-            <p class={styles.componentDesc}>D3 charts with data tables</p>
-          </div>
-          <div class={styles.componentCard}>
-            <p class={styles.statValue}>{componentsInGroup('Forms').length}</p>
-            <p class={styles.componentDesc}>Form controls with a11y wiring</p>
-          </div>
-        </div>
-      </Section>
-
-      <Section title="Start in one file" lead="Vorzela components are plain functions. Bind an accessor where the DOM should update; the function body never re-runs.">
+      <Section title="Start in one file" lead="Vorzela components are plain functions. Bind an accessor where the DOM should update; the function body never re-runs. The preview imports them through the same ~ alias a consumer gets from vorzelajs-ui init.">
         <CodeBlock code={quickStart} />
       </Section>
 
@@ -390,7 +386,7 @@ function ComponentDetail({ component }: { component: ComponentDoc }) {
         )}
       </Section>
 
-      <Section title="Source" lead="Copy the module next to the component you own. Imports use the ~ alias.">
+      <Section title="Source" lead="Copy the module into your app. Imports use the ~ alias; generated styles live under styles/.">
         <CodeBlock code={component.code} />
       </Section>
 
@@ -482,12 +478,7 @@ export function App() {
         mobileOpen={mobileOpen}
         onMobileClose={() => setMobileOpen(false)}
         footer={
-          <div class={styles.demoStack}>
-            <p class={styles.componentDesc}>
-              {components.length} components · real DOM · no vDOM
-            </p>
-            <CopyButton value="npm run dev" label="Copy command" variant="ghost" size="sm" />
-          </div>
+          <span>MIT · source-owned</span>
         }
       />
       <div class={styles.main}>
@@ -506,8 +497,8 @@ export function App() {
             <span>preview</span>
           </div>
           <div class={styles.topbarActions}>
-            <Kbd size="sm">v{version}</Kbd>
-            <a class={styles.chip} href="#/gallery">
+            <Kbd size="sm" className={styles.topbarVersion}>v{version}</Kbd>
+            <a class={`${styles.chip} ${styles.topbarGallery}`} href="#/gallery">
               <Sparkles aria-hidden /> Gallery
             </a>
             <button
@@ -524,7 +515,11 @@ export function App() {
         </header>
         <main id="main" class={styles.content} tabIndex={-1}>
           <For each={() => [route().path]} key={(path) => path}>
-            {(path) => <RoutePage path={path} />}
+            {(path) => (
+              <div class={styles.page}>
+                <RoutePage path={path} />
+              </div>
+            )}
           </For>
         </main>
       </div>

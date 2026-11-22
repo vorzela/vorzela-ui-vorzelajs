@@ -119,7 +119,7 @@ export function CodeBlock({
         <span className={styles.codeLang}>{language}</span>
         <CopyButton value={code} variant="ghost" size="sm" />
       </div>
-      <pre className={styles.codeBody}>{highlightedCode(code, language)}</pre>
+      <pre className={styles.codeBody}>{highlightedCode(code, language) as string}</pre>
     </div>
   )
 }

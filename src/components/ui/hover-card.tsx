@@ -121,7 +121,7 @@ export function HoverCard({
           onFocusOut={closeWithDelay}
         >
           {typeof children === 'function'
-            ? (children as () => unknown)()
+            ? (children as () => ReactNode)()
             : children}
         </div>
       )}

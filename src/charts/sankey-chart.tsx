@@ -13,6 +13,7 @@ import { useAnimatedProgress } from './use-animated-progress.ts'
 import { chartColor, compactNumber } from './chart-utils.ts'
 import type { ChartSize } from './chart-types.ts'
 import styles from './charts.module.scss'
+import type { ReactNode } from '../types.ts'
 
 export type SankeyNode = { id: string; name: string }
 export type SankeyLink = { source: string; target: string; value: number }
@@ -177,8 +178,8 @@ export function SankeyChart({
   nodes: SankeyNode[]
   links: SankeyLink[]
   height?: number
-  title?: unknown
-  description?: unknown
+  title?: ReactNode
+  description?: ReactNode
   className?: string
   animate?: boolean
   valueFormat?: (value: number) => string

@@ -1,6 +1,6 @@
 {
   "name": "vorzela-ui-vorzelajs",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "type": "module",
   "description": "VorzelaJS UI components copied into your app, shadcn-style.",
@@ -16,9 +16,9 @@
     "verify": "npm run registry:build && npm run typecheck && npm test"
   },
   "dependencies": {
-    "@vorzelajs/core": "0.0.21",
-    "@vorzelajs/dom": "0.0.21",
-    "@vorzelajs/table": "0.0.21",
+    "@vorzelajs/core": "0.0.22",
+    "@vorzelajs/dom": "0.0.22",
+    "@vorzelajs/table": "0.0.22",
     "d3": "^7.9.2",
     "d3-sankey": "^0.12.3",
     "lucide": "^1.72.0"
@@ -27,9 +27,9 @@
     "@types/d3": "^7.4.3",
     "@types/d3-sankey": "^0.12.5",
     "@types/node": "^24.19.2",
-    "@vorzelajs/devtools": "^0.0.21",
-    "@vorzelajs/server": "0.0.21",
-    "@vorzelajs/vite-plugin": "^0.0.21",
+    "@vorzelajs/devtools": "^0.0.22",
+    "@vorzelajs/server": "0.0.22",
+    "@vorzelajs/vite-plugin": "^0.0.22",
     "dompurify": "^3.4.17",
     "jsdom": "^29.1.1",
     "sass-embedded": "^1.107.1",

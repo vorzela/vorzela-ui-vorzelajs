@@ -14,6 +14,7 @@ import { useAnimatedProgress } from './use-animated-progress.ts'
 import { chartColor, compactNumber } from './chart-utils.ts'
 import type { ChartSize } from './chart-types.ts'
 import styles from './charts.module.scss'
+import type { ReactNode } from '../types.ts'
 
 export type TreemapNode = {
   name: string
@@ -158,8 +159,8 @@ export function TreemapChart({
 }: {
   data: TreemapNode
   height?: number
-  title?: unknown
-  description?: unknown
+  title?: ReactNode
+  description?: ReactNode
   className?: string
   animate?: boolean
   valueFormat?: (value: number) => string

@@ -6,6 +6,7 @@ import { useAnimatedProgress } from './use-animated-progress.ts'
 import { chartColor, compactNumber } from './chart-utils.ts'
 import type { ChartDatum, ChartSize } from './chart-types.ts'
 import styles from './charts.module.scss'
+import type { ReactNode } from '../types.ts'
 
 export type FunnelDatum = { label: string; value: number }
 
@@ -125,8 +126,8 @@ export function FunnelChart({
 }: {
   data: FunnelDatum[]
   height?: number
-  title?: unknown
-  description?: unknown
+  title?: ReactNode
+  description?: ReactNode
   className?: string
   animate?: boolean
   valueFormat?: (value: number) => string

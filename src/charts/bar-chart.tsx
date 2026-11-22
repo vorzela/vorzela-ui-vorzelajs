@@ -18,14 +18,15 @@ import {
 } from './chart-utils.ts'
 import type { ChartDatum, ChartSeries, ChartSize } from './chart-types.ts'
 import styles from './charts.module.scss'
+import type { ReactNode } from '../types.ts'
 
 export type BarChartProps = {
   data: ChartDatum[]
   xKey: string
   series: ChartSeries[]
   height?: number
-  title?: unknown
-  description?: unknown
+  title?: ReactNode
+  description?: ReactNode
   className?: string
   layout?: 'vertical' | 'horizontal'
   stacked?: boolean

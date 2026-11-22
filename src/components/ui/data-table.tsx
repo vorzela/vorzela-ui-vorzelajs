@@ -6,7 +6,7 @@ import {
   type SortingState,
 } from '@vorzelajs/table'
 import { computed, effect, onCleanup, signal, untrack } from '@vorzelajs/core'
-import { For, Show } from '@vorzelajs/dom'
+import { For, Show, type VorzelaNode } from '@vorzelajs/dom'
 
 import { accessorOf } from '../../hooks/index.ts'
 import { cx } from '../../lib/cx.ts'
@@ -575,7 +575,7 @@ export function DataTable<TData extends RowData>({
                                   {flexRender(
                                     header.column.columnDef.header,
                                     header.getContext(),
-                                  )}
+                                  ) as VorzelaNode}
                                   <SortIcon direction={sorted} />
                                 </button>
                               ) : (
@@ -583,7 +583,7 @@ export function DataTable<TData extends RowData>({
                                   {flexRender(
                                     header.column.columnDef.header,
                                     header.getContext(),
-                                  )}
+                                  ) as VorzelaNode}
                                 </span>
                               )
                             }
@@ -695,7 +695,7 @@ export function DataTable<TData extends RowData>({
                                 {flexRender(
                                   cell.column.columnDef.cell,
                                   cell.getContext(),
-                                )}
+                                ) as VorzelaNode}
                               </td>
                             )
                           }}

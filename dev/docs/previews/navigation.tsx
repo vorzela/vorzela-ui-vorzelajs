@@ -388,10 +388,7 @@ function OutlinePreview() {
 export function SidebarPreview() {
   return (
     <div
-      style={{
-        height: '30rem',
-        overflow: 'hidden',
-      }}
+      class={styles.sidebarStage}
       onClick={(event) => {
         if ((event.target as Element).closest('a')) event.preventDefault()
       }}

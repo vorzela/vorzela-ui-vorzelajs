@@ -9,6 +9,7 @@ import { useAnimatedProgress } from './use-animated-progress.ts'
 import { compactNumber, extentOf, numeric } from './chart-utils.ts'
 import type { ChartDatum, ChartSize } from './chart-types.ts'
 import styles from './charts.module.scss'
+import type { ReactNode } from '../types.ts'
 
 export type HeatmapProps = {
   data: ChartDatum[]
@@ -16,8 +17,8 @@ export type HeatmapProps = {
   yKey?: string
   valueKey?: string
   height?: number
-  title?: unknown
-  description?: unknown
+  title?: ReactNode
+  description?: ReactNode
   className?: string
   animate?: boolean
   valueFormat?: (value: number) => string

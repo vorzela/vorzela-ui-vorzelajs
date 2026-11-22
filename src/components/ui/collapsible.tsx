@@ -74,7 +74,7 @@ export function Collapsible({
           data-state={() => (open() ? 'open' : 'closed')}
         >
           {typeof children === 'function'
-            ? (children as () => unknown)()
+            ? (children as () => ReactNode)()
             : children}
         </div>
       )}

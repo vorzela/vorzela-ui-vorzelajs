@@ -1,10 +1,10 @@
 {
   "name": "chart-shared",
   "type": "chart",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "dependencies": [
-    "@vorzelajs/core@0.0.21",
-    "@vorzelajs/dom@0.0.21"
+    "@vorzelajs/core@0.0.22",
+    "@vorzelajs/dom@0.0.22"
   ],
   "devDependencies": [
     "@types/d3@^7.4.3"

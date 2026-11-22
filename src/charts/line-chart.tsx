@@ -28,6 +28,7 @@ import {
 } from './chart-utils.ts'
 import type { ChartDatum, ChartSeries, ChartSize } from './chart-types.ts'
 import styles from './charts.module.scss'
+import type { ReactNode } from '../types.ts'
 
 const CURVES = {
   linear: curveLinear,
@@ -41,8 +42,8 @@ export type LineChartProps = {
   xKey: string
   series: ChartSeries[]
   height?: number
-  title?: unknown
-  description?: unknown
+  title?: ReactNode
+  description?: ReactNode
   className?: string
   curve?: keyof typeof CURVES
   showDots?: boolean

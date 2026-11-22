@@ -1,7 +1,7 @@
-import type { Component } from '@vorzelajs/dom'
+import type { Component, VorzelaNode } from '@vorzelajs/dom'
 
-export type ReactNode = unknown
-export type ReactElement = unknown
+export type ReactNode = VorzelaNode
+export type ReactElement = VorzelaNode
 export type Key = string | number
 export type CSSProperties = Record<string, string | number>
 // Ported React components use this type for forwarded refs. The DOM host
@@ -14,7 +14,7 @@ export interface HTMLAttributes<T = Element> {
   class?: string
   className?: string
   style?: CSSProperties
-  children?: unknown
+  children?: VorzelaNode
   ref?: ((element: T | Element) => void) | { current: T | Element | null }
   id?: string
   role?: string
